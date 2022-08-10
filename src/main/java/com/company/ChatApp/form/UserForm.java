@@ -1,13 +1,15 @@
 
 package com.company.ChatApp.form;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-
 public class UserForm {
     @NotEmpty(message="This field cannot be empty")
-    @Size(min=3,max=30,message="Size is not valid")
+    @Size(min=3,max=15,message="Size is not valid")
     private String name;
     @NotEmpty(message="This field cannot be empty")
     @Size(min=13,max=30,message="Size is not valid")

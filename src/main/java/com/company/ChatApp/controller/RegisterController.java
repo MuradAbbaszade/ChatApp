@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,7 +35,7 @@ public class RegisterController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public ModelAndView register(@Valid UserForm userForm,BindingResult result,@RequestParam(value = "name", required = false) String name,
+    public ModelAndView register(@ModelAttribute("userForm") @Valid UserForm userForm,BindingResult result,@RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "email", required = false) String email, @RequestParam(value = "password", required = false) String password,
             @RequestParam(value = "repassword", required = false) String repassword) {
         ModelAndView mv = null;

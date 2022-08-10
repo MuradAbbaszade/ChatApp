@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="assets/style.css">
 
-        <title>JSP Page</title>
+        <title>ChatApp</title>
     </head>
     <body>
         <section class="vh-100" style="background-color: #eee">
@@ -64,7 +64,7 @@
                                             <div class="form-check d-flex justify-content-center mb-5">
                                                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                                                 <label class="form-check-label" for="form2Example3">
-                                                    I agree all statements in <a href="#!">Terms of service</a>
+                                                    I agree all statements in <a href="termsOfService">Terms of service</a>
                                                 </label>
                                             </div>
 
