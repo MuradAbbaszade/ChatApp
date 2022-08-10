@@ -39,7 +39,7 @@ public class RegisterController {
             @RequestParam(value = "repassword", required = false) String repassword) {
         ModelAndView mv = null;
         RedirectView view=null;
-        if (result.hasErrors()|!(password.equals(repassword))) {
+        if (result.hasErrors()|!(password.equals(repassword))|userService.findByEmail(email)) {
             mv = new ModelAndView("register");
             view = new RedirectView("/register", true);
         } else {

@@ -41,7 +41,7 @@ public class LoginController {
         
         ModelAndView mv = null;
         RedirectView view = null;
-        if (result.hasErrors() | userService.findByEmailAndPassword(email, password)==null) {
+        if (userService.findByEmailAndPassword(email, password)==null) {
             mv = new ModelAndView("login");
             view = new RedirectView("/login", true);
         } else {
