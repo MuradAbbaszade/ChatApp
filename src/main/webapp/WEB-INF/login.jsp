@@ -48,7 +48,7 @@
                                                 </div>
                                             </div>
                                             <div class="align-items-center mb-4">
-                                                <p class="text-center small fw-bold mt-0 pt-0 mb-0">Don't have an account? <a href="register"
+                                                <p class="text-center small fw-bold mt-0 pt-0 mb-0">Don't have an account? <a style="text-decoration: none" href="register"
                                                                                                                               class="link-submit">Register</a></p>
                                             </div>
 

@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,7 +38,8 @@ public class LoginController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public ModelAndView login(@Valid UserForm userForm, BindingResult result,
+    public ModelAndView login(@ModelAttribute("userForm")@Valid UserForm userForm,
+            BindingResult result,
             @RequestParam(value = "email", required = false) String email,
             @RequestParam(value = "password", required = false) String password,
             HttpServletRequest request) {

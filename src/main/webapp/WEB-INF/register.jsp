@@ -64,12 +64,16 @@
                                             <div class="form-check d-flex justify-content-center mb-5">
                                                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                                                 <label class="form-check-label" for="form2Example3">
-                                                    I agree all statements in <a href="termsOfService">Terms of service</a>
+                                                    I agree all statements in <a style="text-decoration: none" href="termsOfService">Terms of service</a>
                                                 </label>
                                             </div>
 
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                 <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                            </div>
+                                            <div class="align-items-center mb-4">
+                                                <p class="text-center small fw-bold mt-0 pt-0 mb-0">If you already have an account <a style="text-decoration: none" href="login"
+                                                                                                                              class="link-submit">Login</a></p>
                                             </div>
 
                                         </form>
