@@ -24,8 +24,8 @@
             <ul class="menu-bar">
                 <li><a class="menu-item fa fa-user" style="font-size:20px;" href="#"> Profile</a>
                     <ul class="sub-menu menu-bar">
-                        <li><a class="menu-item fa fa-pencil" style="font-size:20px"> Edit</a></li>
-                        <li><a class="menu-item fa fa-cog" style="font-size:20px"> Settings</a></li>
+                        <li><a class="menu-item fa fa-pencil" style="font-size:20px" href="edit"> Edit</a></li>
+                        <li><a class="menu-item fa fa-cog" style="font-size:20px" href="settings"> Settings</a></li>
                         <li><a class="menu-item fa fa-sign-out" style="font-size:20px"> Logout</a></li>
                     </ul>
                 </li>

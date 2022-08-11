@@ -11,6 +11,7 @@ import com.company.service.UserDAOService;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,16 +36,21 @@ public class RegisterController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public ModelAndView register(@ModelAttribute("userForm") @Valid UserForm userForm,BindingResult result,@RequestParam(value = "name", required = false) String name,
-            @RequestParam(value = "email", required = false) String email, @RequestParam(value = "password", required = false) String password,
-            @RequestParam(value = "repassword", required = false) String repassword) {
+    public ModelAndView register(@ModelAttribute("userForm") @Valid UserForm userForm,BindingResult result,
+            @RequestParam(value = "name", required = false) String name,
+            @RequestParam(value = "email", required = false) String email, 
+            @RequestParam(value = "password", required = false) String password,
+            @RequestParam(value = "repassword", required = false) String repassword,
+            HttpServletRequest request) {
         ModelAndView mv = null;
         RedirectView view=null;
         if (result.hasErrors()|!(password.equals(repassword))|userService.findByEmail(email)) {
             mv = new ModelAndView("register");
             view = new RedirectView("/register", true);
         } else {
-            userService.insert(new User(0,name,email,password));
+            User user = new User(0,name,email,password);
+            userService.insert(user);
+            request.getSession().setAttribute("loggedInUser",user);
             mv = new ModelAndView("chat");
             view = new RedirectView("/chat", true);
         }

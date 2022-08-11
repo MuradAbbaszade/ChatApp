@@ -5,24 +5,21 @@
  */
 package com.company.ChatApp.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ *
+ * @author roma-cervice
+ */
 @Controller
-@RequestMapping("/chat")
-public class ChatController {
-    
-    @RequestMapping(method = RequestMethod.GET)
-    public String showChatPage(HttpServletRequest request,HttpServletResponse response){
-        if(request.getSession().getAttribute("loggedInUser")==null){
-            return "login";
-        }
-        else{
-            return "chat";
-        }
+@RequestMapping("/settings")
+public class SettingsController {
+    @RequestMapping(method=RequestMethod.GET)
+    public ModelAndView showEditPage(){
+    ModelAndView mv = new ModelAndView("settings");
+    return mv;
     }
 }

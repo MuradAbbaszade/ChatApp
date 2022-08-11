@@ -6,8 +6,10 @@
 package com.company.ChatApp.controller;
 
 import com.company.ChatApp.form.UserForm;
+import com.company.entity.User;
 import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,16 +37,19 @@ public class LoginController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public ModelAndView register(@Valid UserForm userForm, BindingResult result,
+    public ModelAndView login(@Valid UserForm userForm, BindingResult result,
             @RequestParam(value = "email", required = false) String email,
-            @RequestParam(value = "password", required = false) String password) {
-        
+            @RequestParam(value = "password", required = false) String password,
+            HttpServletRequest request) {
+
         ModelAndView mv = null;
         RedirectView view = null;
-        if (userService.findByEmailAndPassword(email, password)==null) {
+        if (userService.findByEmailAndPassword(email, password) == null) {
             mv = new ModelAndView("login");
             view = new RedirectView("/login", true);
         } else {
+            User user = userService.findByEmailAndPassword(email, password);
+            request.getSession().setAttribute("loggedInUser",user);
             mv = new ModelAndView("chat");
             view = new RedirectView("/chat", true);
         }
