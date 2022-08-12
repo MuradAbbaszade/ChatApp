@@ -6,6 +6,7 @@
 package com.company.ChatApp.controller;
 
 import com.company.ChatApp.form.UserForm;
+import com.company.config.PasswordEncoder;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
@@ -50,11 +51,15 @@ public class EditController {
             @RequestParam(value = "repassword", required = false) String repassword) {
         ModelAndView mv = null;
         RedirectView view = null;
-        if (result.hasErrors() | !(password.equals(repassword)) | userService.findByEmail(email)) {
-            mv = new ModelAndView("login");
-            view = new RedirectView("/login", true);
+        User user = (User) request.getSession().getAttribute("loggedInUser");
+
+        if (result.hasErrors() | !(password.equals(repassword))) {
+            mv = new ModelAndView("edit");
+            view = new RedirectView("/edit", true);
+        } else if (userService.findByEmail(email) && !(email.equals(user.getEmail()))) {
+            mv = new ModelAndView("edit");
+            view = new RedirectView("/edit", true);
         } else {
-            User user = (User) request.getSession().getAttribute("loggedInUser");
             user.setName(name);
             user.setEmail(email);
             user.setPassword(password);
@@ -64,5 +69,15 @@ public class EditController {
         }
         mv.setView(view);
         return mv;
+    }
+
+    public static String getLoggedInUserName(HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("loggedInUser");
+        return user.getName();
+    }
+
+    public static String getLoggedInUserEmail(HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("loggedInUser");
+        return user.getEmail();
     }
 }

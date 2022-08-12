@@ -4,6 +4,7 @@
     Author     : roma-cervice
 --%>
 
+<%@page import="com.company.ChatApp.controller.EditController"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -37,14 +38,14 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="name" id="name" class="form-control" value />
+                                                    <input name="name" id="name" class="form-control" value="<%=EditController.getLoggedInUserName(request)%>">
                                                     <label class="form-label" for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="email" type="email" id="email" class="form-control" />
+                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.getLoggedInUserEmail(request) %>"/>
                                                     <label class="form-label" for="email">Your Email</label>
                                                 </div>
                                             </div>
@@ -52,7 +53,7 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="password" type="password" id="password" class="form-control" />
+                                                    <input name="password" type="password" id="password" class="form-control"/>
                                                     <label class="form-label" for="password">Password</label>
                                                 </div>
                                             </div>
