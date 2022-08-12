@@ -6,11 +6,9 @@
 package com.company.ChatApp.controller;
 
 import com.company.ChatApp.form.UserForm;
-import com.company.config.PasswordEncoder;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,18 +40,16 @@ public class EditController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/")
+    @RequestMapping(method = RequestMethod.POST, value = "/")
     public ModelAndView edit(HttpServletRequest request,
             @ModelAttribute("userForm") @Valid UserForm userForm, BindingResult result,
             @RequestParam(value = "name", required = false) String name,
-            @RequestParam(value = "email", required = false) String email,
-            @RequestParam(value = "password", required = false) String password,
-            @RequestParam(value = "repassword", required = false) String repassword) {
+            @RequestParam(value = "email", required = false) String email) {
         ModelAndView mv = null;
         RedirectView view = null;
         User user = (User) request.getSession().getAttribute("loggedInUser");
 
-        if (result.hasErrors() | !(password.equals(repassword))) {
+        if (result.hasErrors()) {
             mv = new ModelAndView("edit");
             view = new RedirectView("/edit", true);
         } else if (userService.findByEmail(email) && !(email.equals(user.getEmail()))) {
@@ -62,7 +58,6 @@ public class EditController {
         } else {
             user.setName(name);
             user.setEmail(email);
-            user.setPassword(password);
             userService.update(user);
             mv = new ModelAndView("chat");
             view = new RedirectView("/chat", true);

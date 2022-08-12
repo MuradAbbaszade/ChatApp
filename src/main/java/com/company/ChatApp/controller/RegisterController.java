@@ -8,10 +8,7 @@ package com.company.ChatApp.controller;
 import com.company.ChatApp.form.UserForm;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
-import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,7 +32,7 @@ public class RegisterController {
         return mv;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/")
+    @RequestMapping(method = RequestMethod.POST, value = "/")
     public ModelAndView register(@ModelAttribute("userForm") @Valid UserForm userForm,BindingResult result,
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "email", required = false) String email, 
