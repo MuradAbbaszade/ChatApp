@@ -5,8 +5,11 @@
  */
 package com.company.ChatApp.controller;
 
+import com.company.entity.User;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -18,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/chat")
 public class ChatController {
     
-    private ArrayList<String> messages = new ArrayList<String>();
+    private Map<String,String> messages = new TreeMap<String,String>();
 
-    public ArrayList<String> getMessages() {
+    public Map<String,String> getMessages() {
         return messages;
     }
 
@@ -38,7 +41,8 @@ public class ChatController {
     public void sendMessage(HttpServletRequest request,
             HttpServletResponse response,
             @RequestParam(value = "message", required = false) String message) throws IOException {
-        messages.add(message);
+        User user = (User)request.getSession().getAttribute("loggedInUser");
+        messages.put(user.getName(),message);
         request.getSession().setAttribute("messages", messages);
         response.sendRedirect("chat");
     }
