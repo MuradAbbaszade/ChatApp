@@ -5,6 +5,7 @@
  */
 package com.company.ChatApp.controller;
 
+import com.company.ChatApp.form.LoggedInUser;
 import com.company.entity.User;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,13 +22,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/chat")
 public class ChatController {
     
-    private Map<String,String> messages = new TreeMap<String,String>();
+    private ArrayList<LoggedInUser> messages = new ArrayList<LoggedInUser>();
 
-    public Map<String,String> getMessages() {
+    public ArrayList<LoggedInUser> getMessages() {
         return messages;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+@RequestMapping(method = RequestMethod.GET)
     public String showChatPage(HttpServletRequest request,
             HttpServletResponse response) throws IOException {
         if (request.getSession().getAttribute("loggedInUser") == null) {
@@ -42,7 +43,8 @@ public class ChatController {
             HttpServletResponse response,
             @RequestParam(value = "message", required = false) String message) throws IOException {
         User user = (User)request.getSession().getAttribute("loggedInUser");
-        messages.put(user.getName(),message);
+        LoggedInUser loggedInUser = new LoggedInUser(user.getName(),message);
+        messages.add(loggedInUser);
         request.getSession().setAttribute("messages", messages);
         response.sendRedirect("chat");
     }

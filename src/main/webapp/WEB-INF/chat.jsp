@@ -4,6 +4,7 @@
     Author     : roma-cervice
 --%>
 
+<%@page import="com.company.ChatApp.form.LoggedInUser"%>
 <%@page import="java.util.TreeMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="com.company.entity.User"%>
@@ -44,24 +45,25 @@
 
                 <ul class="list-unstyled">
                     <%
-                        ArrayList<String> messages = (ArrayList<String>) request.getSession().getAttribute("messages");
+                        ArrayList<LoggedInUser> messages = (ArrayList<LoggedInUser>) request.getSession().getAttribute("messages");
                         if (messages != null) {
-                           for (String message : messages) {%>
+                            for (LoggedInUser loggedInUser : messages) {
+                    %>
                     <li class="d-flex justify-content-between mb-4">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between p-3">
-                                <p class="fw-bold mb-0"></p>
+                                <p class="fw-bold mb-0"><%=loggedInUser.getName()%></p>
                                 <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
                             </div>
                             <div class="card-body">
                                 <p class="mb-0">
-                                    <%=message%>
+                                    <%=loggedInUser.getMessage()%>
                                 </p>
                             </div>
                         </div>
                     </li>
-                    <%}
-                        }
+                    <%}   
+                       }
                     %>
                     <li class="bg-white mb-3">
                         <form class="form-outline" action="chat" method="POST">

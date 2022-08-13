@@ -4596,3 +4596,411 @@ This generated password is for development use only. Your security configuration
 2022-08-13 13:42:17.273  INFO 4268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-08-13 13:42:17.276  INFO 4268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-08-13 13:42:17.288  INFO 4268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 20:38:27.406  INFO 4768 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 20:38:27.496  INFO 4768 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4768 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 20:38:27.497  INFO 4768 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 20:38:28.778  INFO 4768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 20:38:28.820  INFO 4768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2022-08-13 20:38:29.876  INFO 4768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 20:38:30.286  INFO 4768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 20:38:30.500  INFO 4768 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 20:38:30.589  INFO 4768 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 20:38:30.855  INFO 4768 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 20:38:31.166  INFO 4768 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 20:38:32.180  INFO 4768 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 20:38:32.405  INFO 4768 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:38:32.640  WARN 4768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 20:38:32.919  WARN 4768 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 932b3a5f-04a0-4eae-8fa6-6c9a2323abf3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 20:38:33.392  INFO 4768 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@126425b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@103ee8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@9b3956, org.springframework.security.web.header.HeaderWriterFilter@721583, org.springframework.security.web.authentication.logout.LogoutFilter@1f964f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a752bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b31455, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dd552c, org.springframework.security.web.session.SessionManagementFilter@350eb, org.springframework.security.web.access.ExceptionTranslationFilter@1281d19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@457c2b]
+2022-08-13 20:38:34.797  INFO 4768 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.787 seconds (JVM running for 9.334)
+2022-08-13 20:38:35.050  INFO 4768 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:38:35.052  INFO 4768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 20:38:35.063  INFO 4768 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 20:48:02.170  INFO 432 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 20:48:02.279  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 432 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 20:48:02.282  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 20:48:03.590  INFO 432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 20:48:03.633  INFO 432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2022-08-13 20:48:04.449  INFO 432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 20:48:04.726  INFO 432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 20:48:04.971  INFO 432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 20:48:05.071  INFO 432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 20:48:05.334  INFO 432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 20:48:05.582  INFO 432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 20:48:06.507  INFO 432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 20:48:06.680  INFO 432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:48:06.884  WARN 432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 20:48:07.018  WARN 432 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9c7c695b-d1f0-42d4-9523-6170dd4af900
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 20:48:07.375  INFO 432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68d0db, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1be7319, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b8ead8, org.springframework.security.web.header.HeaderWriterFilter@1401cdc, org.springframework.security.web.authentication.logout.LogoutFilter@3cf878, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e807e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a16eb3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11a2543, org.springframework.security.web.session.SessionManagementFilter@16528d, org.springframework.security.web.access.ExceptionTranslationFilter@1f5a6ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4afb78]
+2022-08-13 20:48:08.692  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.639 seconds (JVM running for 9.412)
+2022-08-13 20:48:08.860  INFO 432 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:48:08.863  INFO 432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 20:48:08.873  INFO 432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 20:50:11.754  INFO 4532 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 20:50:11.833  INFO 4532 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4532 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 20:50:11.834  INFO 4532 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 20:50:13.125  INFO 4532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 20:50:13.163  INFO 4532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-13 20:50:14.471  INFO 4532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 20:50:14.779  INFO 4532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 20:50:15.050  INFO 4532 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 20:50:15.144  INFO 4532 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 20:50:15.406  INFO 4532 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 20:50:15.672  INFO 4532 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 20:50:16.576  INFO 4532 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 20:50:16.749  INFO 4532 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:50:17.005  WARN 4532 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 20:50:17.160  WARN 4532 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 52b31e53-a06c-408b-964b-c3bfdb9d9d09
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 20:50:17.461  INFO 4532 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71d261, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@164e9a, org.springframework.security.web.context.SecurityContextPersistenceFilter@db83f8, org.springframework.security.web.header.HeaderWriterFilter@ad5f2a, org.springframework.security.web.authentication.logout.LogoutFilter@17cb96e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d4d9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cc9681, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bfffb3, org.springframework.security.web.session.SessionManagementFilter@721583, org.springframework.security.web.access.ExceptionTranslationFilter@1ae36f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c25a62]
+2022-08-13 20:50:18.772  INFO 4532 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.553 seconds (JVM running for 9.3)
+2022-08-13 20:50:18.946  INFO 4532 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:50:18.949  INFO 4532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 20:50:18.960  INFO 4532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 20:52:27.144  INFO 2712 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 20:52:27.229  INFO 2712 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 2712 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 20:52:27.230  INFO 2712 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 20:52:28.585  INFO 2712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 20:52:28.619  INFO 2712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-13 20:52:29.574  INFO 2712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 20:52:29.993  INFO 2712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 20:52:30.293  INFO 2712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 20:52:30.418  INFO 2712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 20:52:30.794  INFO 2712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 20:52:31.107  INFO 2712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 20:52:32.032  INFO 2712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 20:52:32.238  INFO 2712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:52:32.442  WARN 2712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 20:52:32.573  WARN 2712 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8b964a00-a38b-441f-abc4-f4bad1480431
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 20:52:32.883  INFO 2712 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71d261, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@164e9a, org.springframework.security.web.context.SecurityContextPersistenceFilter@db83f8, org.springframework.security.web.header.HeaderWriterFilter@ad5f2a, org.springframework.security.web.authentication.logout.LogoutFilter@17cb96e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d4d9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cc9681, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bfffb3, org.springframework.security.web.session.SessionManagementFilter@721583, org.springframework.security.web.access.ExceptionTranslationFilter@1ae36f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c25a62]
+2022-08-13 20:52:34.195  INFO 2712 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.584 seconds (JVM running for 9.904)
+2022-08-13 20:52:34.365  INFO 2712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:52:34.368  INFO 2712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 20:52:34.377  INFO 2712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 20:59:16.239  INFO 5396 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 20:59:16.361  INFO 5396 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5396 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 20:59:16.363  INFO 5396 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 20:59:17.768  INFO 5396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 20:59:17.799  INFO 5396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2022-08-13 20:59:18.622  INFO 5396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 20:59:18.959  INFO 5396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 20:59:19.097  INFO 5396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 20:59:19.188  INFO 5396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 20:59:19.448  INFO 5396 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 20:59:19.729  INFO 5396 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 20:59:20.657  INFO 5396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 20:59:20.871  INFO 5396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:59:21.082  WARN 5396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 20:59:21.222  WARN 5396 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0c40c98a-eadf-4500-8349-f194bc89368e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 20:59:21.615  INFO 5396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f45950, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71d261, org.springframework.security.web.context.SecurityContextPersistenceFilter@2787b5, org.springframework.security.web.header.HeaderWriterFilter@1281d19, org.springframework.security.web.authentication.logout.LogoutFilter@1a16eb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b41ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@350eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@164e9a, org.springframework.security.web.session.SessionManagementFilter@901203, org.springframework.security.web.access.ExceptionTranslationFilter@1a373fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ede35e]
+2022-08-13 20:59:22.828  INFO 5396 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.436 seconds (JVM running for 9.055)
+2022-08-13 20:59:22.991  INFO 5396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 20:59:22.994  INFO 5396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 20:59:23.011  INFO 5396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:08:55.564  INFO 268 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:08:55.651  INFO 268 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 268 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:08:55.652  INFO 268 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:08:56.857  INFO 268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:08:56.888  INFO 268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:08:58.098  INFO 268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:08:58.410  INFO 268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:08:58.618  INFO 268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:08:58.704  INFO 268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:08:58.985  INFO 268 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:08:59.295  INFO 268 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:09:00.182  INFO 268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:09:00.386  INFO 268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:09:00.592  WARN 268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:09:00.723  WARN 268 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2ebf769b-107a-4e21-b912-188e0ea2228c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:09:01.033  INFO 268 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a6dc21, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@173d271, org.springframework.security.web.context.SecurityContextPersistenceFilter@721583, org.springframework.security.web.header.HeaderWriterFilter@1f11e91, org.springframework.security.web.authentication.logout.LogoutFilter@3b953c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2787b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@497286, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f45950, org.springframework.security.web.session.SessionManagementFilter@1e35070, org.springframework.security.web.access.ExceptionTranslationFilter@1b22ae3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f5dd23]
+2022-08-13 21:09:02.466  INFO 268 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.398 seconds (JVM running for 8.893)
+2022-08-13 21:09:02.692  INFO 268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:09:02.695  INFO 268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:09:02.710  INFO 268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:15:08.950  INFO 4988 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:15:09.228  INFO 4988 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4988 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:15:09.229  INFO 4988 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:15:11.140  INFO 4988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:15:11.172  INFO 4988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:15:12.087  INFO 4988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:15:12.428  INFO 4988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:15:12.563  INFO 4988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:15:12.653  INFO 4988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:15:12.947  INFO 4988 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:15:13.227  INFO 4988 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:15:14.093  INFO 4988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:15:14.301  INFO 4988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:15:14.502  WARN 4988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:15:14.642  WARN 4988 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 186711eb-38cf-4341-8b67-510181389941
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:15:15.030  INFO 4988 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e3ff9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e6c070, org.springframework.security.web.context.SecurityContextPersistenceFilter@dff674, org.springframework.security.web.header.HeaderWriterFilter@44589a, org.springframework.security.web.authentication.logout.LogoutFilter@1fe7f15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cc9681, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a752bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4afb78, org.springframework.security.web.session.SessionManagementFilter@8b41ad, org.springframework.security.web.access.ExceptionTranslationFilter@1d8dd66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1399548]
+2022-08-13 21:15:16.304  INFO 4988 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.027 seconds (JVM running for 9.749)
+2022-08-13 21:15:16.464  INFO 4988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:15:16.475  INFO 4988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:15:16.486  INFO 4988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:15:45.694  INFO 5728 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:15:45.786  INFO 5728 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5728 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:15:45.787  INFO 5728 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:15:46.989  INFO 5728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:15:47.016  INFO 5728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:15:47.841  INFO 5728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:15:48.124  INFO 5728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:15:48.335  INFO 5728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:15:48.422  INFO 5728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:15:48.685  INFO 5728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:15:48.982  INFO 5728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:15:50.000  INFO 5728 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:15:50.316  INFO 5728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:15:50.597  WARN 5728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:15:50.814  WARN 5728 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1c3f98a9-7c35-4429-a921-e036368f6773
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:15:51.180  INFO 5728 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f45950, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71d261, org.springframework.security.web.context.SecurityContextPersistenceFilter@2787b5, org.springframework.security.web.header.HeaderWriterFilter@1281d19, org.springframework.security.web.authentication.logout.LogoutFilter@1a16eb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b41ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@350eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@164e9a, org.springframework.security.web.session.SessionManagementFilter@901203, org.springframework.security.web.access.ExceptionTranslationFilter@1a373fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ede35e]
+2022-08-13 21:15:52.488  INFO 5728 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.291 seconds (JVM running for 8.686)
+2022-08-13 21:15:52.660  INFO 5728 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:15:52.663  INFO 5728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:15:52.674  INFO 5728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:19:50.487  INFO 4680 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:19:50.591  INFO 4680 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4680 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:19:50.594  INFO 4680 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:19:52.429  INFO 4680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:19:52.457  INFO 4680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:19:53.322  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:19:53.610  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:19:53.750  INFO 4680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:19:53.902  INFO 4680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:19:54.173  INFO 4680 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:19:54.493  INFO 4680 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:19:55.371  INFO 4680 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:19:55.544  INFO 4680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:19:55.815  WARN 4680 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:19:55.953  WARN 4680 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7d8cf044-3aa0-4fb0-a663-d8640f23a7b2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:19:56.267  INFO 4680 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15e83ac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38938e, org.springframework.security.web.context.SecurityContextPersistenceFilter@16528d, org.springframework.security.web.header.HeaderWriterFilter@dff674, org.springframework.security.web.authentication.logout.LogoutFilter@1bc1d44, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9a5022, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@995c5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50ae56, org.springframework.security.web.session.SessionManagementFilter@3ecfef, org.springframework.security.web.access.ExceptionTranslationFilter@216f01, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a1a0d]
+2022-08-13 21:19:57.536  INFO 4680 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.517 seconds (JVM running for 9.216)
+2022-08-13 21:19:57.812  INFO 4680 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:19:57.814  INFO 4680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:19:57.825  INFO 4680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:45:04.862  INFO 4904 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:45:04.946  INFO 4904 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4904 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:45:04.947  INFO 4904 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:45:06.149  INFO 4904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:45:06.180  INFO 4904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:45:07.008  INFO 4904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:45:07.368  INFO 4904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:45:07.506  INFO 4904 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:45:07.594  INFO 4904 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:45:07.858  INFO 4904 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:45:08.099  INFO 4904 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:45:09.052  INFO 4904 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:45:09.232  INFO 4904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:45:09.475  WARN 4904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:45:09.643  WARN 4904 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7ffba267-99ba-4238-9df0-e81fc584be5d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:45:10.035  INFO 4904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f4c769, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bd6fd6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fc19cf, org.springframework.security.web.header.HeaderWriterFilter@db83f8, org.springframework.security.web.authentication.logout.LogoutFilter@1ede4ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@131af02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9a5022, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a8718, org.springframework.security.web.session.SessionManagementFilter@9b3956, org.springframework.security.web.access.ExceptionTranslationFilter@1c50f52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f45950]
+2022-08-13 21:45:11.242  INFO 4904 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 6.967 seconds (JVM running for 8.806)
+2022-08-13 21:45:11.420  INFO 4904 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:45:11.422  INFO 4904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:45:11.433  INFO 4904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:46:42.746  INFO 6044 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:46:42.826  INFO 6044 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 6044 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:46:42.828  INFO 6044 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:46:44.038  INFO 6044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:46:44.065  INFO 6044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:46:44.920  INFO 6044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:46:45.351  INFO 6044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:46:45.725  INFO 6044 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:46:45.839  INFO 6044 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:46:46.115  INFO 6044 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:46:46.357  INFO 6044 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:46:47.341  INFO 6044 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:46:47.512  INFO 6044 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:46:47.719  WARN 6044 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:46:47.850  WARN 6044 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 84ce5f7e-9184-4d1e-ad2b-f09d4f80528d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:46:48.196  INFO 6044 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a6dc21, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@173d271, org.springframework.security.web.context.SecurityContextPersistenceFilter@721583, org.springframework.security.web.header.HeaderWriterFilter@1f11e91, org.springframework.security.web.authentication.logout.LogoutFilter@3b953c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2787b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@497286, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f45950, org.springframework.security.web.session.SessionManagementFilter@1e35070, org.springframework.security.web.access.ExceptionTranslationFilter@1b22ae3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f5dd23]
+2022-08-13 21:46:49.528  INFO 6044 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.207 seconds (JVM running for 8.934)
+2022-08-13 21:46:49.705  INFO 6044 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:46:49.708  INFO 6044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:46:49.717  INFO 6044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-13 21:48:44.823  INFO 4236 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-13 21:48:44.901  INFO 4236 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4236 (started by roma-cervice in C:\Users\roma-cervice\Documents\NetBeansProjects\ChatAppWeb)
+2022-08-13 21:48:44.903  INFO 4236 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-13 21:48:46.278  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-13 21:48:46.322  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2022-08-13 21:48:47.468  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 21:48:47.805  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 21:48:47.940  INFO 4236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 21:48:48.029  INFO 4236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-13 21:48:48.311  INFO 4236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-13 21:48:48.578  INFO 4236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-13 21:48:49.480  INFO 4236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 21:48:49.691  INFO 4236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:48:49.892  WARN 4236 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 21:48:50.030  WARN 4236 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 99ff65c3-5af5-43a8-9da7-fcd792694f31
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-13 21:48:50.416  INFO 4236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f45950, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71d261, org.springframework.security.web.context.SecurityContextPersistenceFilter@2787b5, org.springframework.security.web.header.HeaderWriterFilter@1281d19, org.springframework.security.web.authentication.logout.LogoutFilter@1a16eb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b41ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@350eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@164e9a, org.springframework.security.web.session.SessionManagementFilter@901203, org.springframework.security.web.access.ExceptionTranslationFilter@1a373fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ede35e]
+2022-08-13 21:48:51.602  INFO 4236 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.29 seconds (JVM running for 8.736)
+2022-08-13 21:48:51.768  INFO 4236 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 21:48:51.771  INFO 4236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 21:48:51.782  INFO 4236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
