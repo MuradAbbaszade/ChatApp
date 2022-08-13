@@ -4,6 +4,8 @@
     Author     : roma-cervice
 --%>
 
+<%@page import="org.springframework.web.servlet.view.RedirectView"%>
+<%@page import="org.springframework.web.servlet.ModelAndView"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -52,14 +54,21 @@
                             </div>
                         </div>
                     </li>
+                    <%
+                        String message = (String)request.getSession().getAttribute("message");
+                        if(message!=null){
+                            while(!(message.isEmpty())){%>
+                            <p><%=message%></p>
+                            <%}
+                        }
+                    %>
                     <li class="bg-white mb-3">
-                        <div class="form-outline">
-                            <input class="form-control" name="message" id="message" rows="4"/>
-                        </div>
+                        <form class="form-outline" action="chat" method="POST">
+                            <input class="form-control" name="message" id="message"/>
+                            <button name="send" type="submit"  value="Send" class="btn btn-info btn-rounded float-end">Send</button>
+                        </form>
                     </li>
-                    <button type="button" type="submit" class="btn btn-info btn-rounded float-end">Send</button>
                 </ul>
-
             </div>
         </div>
     </body>
