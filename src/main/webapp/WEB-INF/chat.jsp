@@ -4,6 +4,8 @@
     Author     : roma-cervice
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="javax.validation.OverridesAttribute.List"%>
 <%@page import="org.springframework.web.servlet.view.RedirectView"%>
 <%@page import="org.springframework.web.servlet.ModelAndView"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -55,11 +57,11 @@
                         </div>
                     </li>
                     <%
-                        String message = (String)request.getSession().getAttribute("message");
-                        if(message!=null){
-                            while(!(message.isEmpty())){%>
-                            <p><%=message%></p>
-                            <%}
+                        ArrayList<String> messages = (ArrayList<String>)request.getSession().getAttribute("messages");
+                        if(messages!=null){
+                        for(String message : messages ){%>
+                        <p><%=message%></p>
+                        <%}
                         }
                     %>
                     <li class="bg-white mb-3">
