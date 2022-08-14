@@ -13,6 +13,21 @@ public class LoggedInUser {
 
     private String name;
     private String message;
+    private String date;
+
+    public LoggedInUser(String name, String message, String date) {
+        this.name = name;
+        this.message = message;
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public LoggedInUser(String name, String message) {
         this.name = name;
