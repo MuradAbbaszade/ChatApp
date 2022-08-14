@@ -18,9 +18,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
     </head>
     <body>
-        <% response.setHeader("Refresh", "2"); %>
+        <% response.setHeader("Refresh", "3"); %>
         <%
             ArrayList<LoggedInUser> messages = (ArrayList<LoggedInUser>) request.getSession().getAttribute("messages");
             if (messages != null) {
@@ -29,7 +30,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between p-3">
                 <p class="fw-bold mb-0"><%=loggedInUser.getName()%></p>
-                <p class="text-muted small mb-0"><i class="far fa-clock"></i><%=loggedInUser.getDate() %></p>
+                <p class="text-muted small mb-0"><i class="far fa-clock"></i><%=loggedInUser.getDate()%></p>
             </div>
             <div class="card-body">
                 <p class="mb-0">

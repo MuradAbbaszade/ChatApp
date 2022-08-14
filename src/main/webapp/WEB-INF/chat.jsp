@@ -43,9 +43,9 @@
         <div class="center">
             <div class="container">
                 <div style="overflow:hidden;">
-                    <iframe style="height:400px" class="container" src="http://localhost:8081/ChatAppWeb/messages" title="Messages"></iframe>
+                    <iframe id="iframe" onload="this.contentWindow.document.documentElement.scrollTop=this.contentWindow.document.documentElement.scrollHeight" style="border:1px solid #eee ; height:450px" class="container" src="http://localhost:8081/ChatAppWeb/messages" title="Messages"></iframe>
                 </div>
-                <form style="padding-top:100px" class="form-outline" action="chat" method="POST">
+                <form style="padding-top:50px" class="form-outline" action="chat" method="POST">
                     <input class="form-control" name="message" id="message"/>
                     <button name="send" type="submit"  value="Send" class="btn btn-info btn-rounded float-end">Send</button>
                 </form>
