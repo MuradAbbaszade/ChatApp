@@ -6,6 +6,7 @@
 package com.company.ChatApp.controller;
 
 import com.company.ChatApp.form.LoggedInUser;
+import com.company.ChatApp.form.UserForm;
 import com.company.entity.User;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -22,10 +23,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/chat")
 public class ChatController {
 
-    private ArrayList<LoggedInUser> messages = new ArrayList<LoggedInUser>();
+    private ArrayList<UserForm> usersAndMessages = new ArrayList<UserForm>();
 
-    public ArrayList<LoggedInUser> getMessages() {
-        return messages;
+    public ArrayList<UserForm> getMessages() {
+        return usersAndMessages;
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -47,12 +48,12 @@ public class ChatController {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("d MMM yyyy HH:mm");
         String strDate = formatter.format(date);
-        LoggedInUser loggedInUser = new LoggedInUser(user.getName(), message, strDate);
+        UserForm userForm = new UserForm(user.getName(), message, strDate);
 
-        messages.add(loggedInUser);
+        usersAndMessages.add(userForm);
 
         request.getSession()
-                .setAttribute("messages", messages);
+                .setAttribute("usersAndMessages", usersAndMessages);
         response.sendRedirect(
                 "chat");
     }

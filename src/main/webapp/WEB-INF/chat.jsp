@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>ChatApp</title>
     </head>
-    <body>
+    <body style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
         <div class="profile-menu">
             <ul class="menu-bar">
                 <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
@@ -40,14 +40,17 @@
                 </li>
             </ul>
         </div>
+
+        <div style="width:1100px" class="container">
+            <iframe id="iframe" onload="this.contentWindow.document.documentElement.scrollTop = this.contentWindow.document.documentElement.scrollHeight" style="border:2px solid black ; height:500px;" class="container" src="http://localhost:8081/ChatAppWeb/messages" title="Messages"></iframe>
+        </div>
+
         <div class="center">
             <div class="container">
-                <div style="overflow:hidden;">
-                    <iframe id="iframe" onload="this.contentWindow.document.documentElement.scrollTop=this.contentWindow.document.documentElement.scrollHeight" style="border:1px solid #eee ; height:450px" class="container" src="http://localhost:8081/ChatAppWeb/messages" title="Messages"></iframe>
-                </div>
-                <form style="padding-top:50px" class="form-outline" action="chat" method="POST">
-                    <input class="form-control" name="message" id="message"/>
-                    <button name="send" type="submit"  value="Send" class="btn btn-info btn-rounded float-end">Send</button>
+                <form class="form-outline" action="chat" method="POST">
+                    <input style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
+                    <br>
+                    <button name="send" type="submit"  value="Send" class="btn btn-success btn-rounded float-end">Send</button>
                 </form>
             </div>
         </div>

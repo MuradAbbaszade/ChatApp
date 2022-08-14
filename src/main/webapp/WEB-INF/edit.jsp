@@ -29,7 +29,7 @@
                         <div class="card text-black" style="border-radius: 25px;">
                             <div class="card-body p-md-5">
                                 <div class="row justify-content-center">
-                                    <div style="padding-top:60px" class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2">
+                                    <div style="padding-top:110px;" class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2">
 
                                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Profile</p>
 
@@ -60,7 +60,7 @@
 
                                     </div>
                                     <div style="padding: 100px" class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-1">
-                                        <img style="height: 400px" src="https://cdn-icons-png.flaticon.com/512/166/166256.png"
+                                        <img src="https://png.pngtree.com/png-vector/20190803/ourlarge/pngtree-user-user-id-id-profile-image-abstract-flat-color-icon-templa-png-image_1648660.jpg"
                                              class="img-fluid" alt="Sample image">
 
                                     </div>

@@ -71,16 +71,13 @@
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                 <button type="submit" class="btn btn-primary btn-lg">Register</button>
                                             </div>
-                                            <div class="align-items-center mb-4">
-                                                <p class="text-center small fw-bold mt-0 pt-0 mb-0">If you already have an account <a style="text-decoration: none" href="login"
-                                                                                                                              class="link-submit">Login</a></p>
-                                            </div>
+                                            <p class="text-center small fw-bold mt-0 pt-0 mb-0">If you already have an account <a style="text-decoration: none" href="login"
+                                                                                                                                  class="link-submit">Login</a></p>
 
                                         </form>
-
                                     </div>
                                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                        <img src="https://img.freepik.com/free-vector/programmer-working-web-development-code-engineer-programming-python-php-java-script-computer_90220-249.jpg?w=826&t=st=1659674592~exp=1659675192~hmac=ae2fbb959bb80bd047678c460b0c79bfba77486bc0babc65f4b2db242b48d8e0"
+                                        <img style="margin-left: 60px ; width:500px" src="https://www.counterpath.com/wp-content/uploads/2019/10/03-Video-Conferencing-1.jpg"
                                              class="img-fluid" alt="Sample image">
 
                                     </div>

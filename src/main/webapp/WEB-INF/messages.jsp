@@ -4,6 +4,7 @@
     Author     : roma-cervice
 --%>
 
+<%@page import="com.company.ChatApp.form.UserForm"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.ArrayList"%>
@@ -20,21 +21,21 @@
         <title>JSP Page</title>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
         <% response.setHeader("Refresh", "3"); %>
         <%
-            ArrayList<LoggedInUser> messages = (ArrayList<LoggedInUser>) request.getSession().getAttribute("messages");
-            if (messages != null) {
-                for (LoggedInUser loggedInUser : messages) {
+            ArrayList<UserForm> usersAndMessages = (ArrayList<UserForm>) request.getSession().getAttribute("usersAndMessages");
+            if (usersAndMessages != null) {
+                for (UserForm userAndMessage : usersAndMessages) {
         %>
-        <div class="card">
-            <div class="card-header d-flex justify-content-between p-3">
-                <p class="fw-bold mb-0"><%=loggedInUser.getName()%></p>
-                <p class="text-muted small mb-0"><i class="far fa-clock"></i><%=loggedInUser.getDate()%></p>
+        <div style="background-color: white ; border:2px solid black"class="container">
+            <div style="background-color: whitesmoke" class="card-header d-flex justify-content-between p-3">
+                <p class="fw-bold mb-0"><%=userAndMessage.getName()%></p>
+                <p class="text-muted small mb-0"><i class="far fa-clock"></i><%=userAndMessage.getDate()%></p>
             </div>
             <div class="card-body">
                 <p class="mb-0">
-                    <%=loggedInUser.getMessage()%>
+                    <%=userAndMessage.getMessage()%>
                 </p>
             </div>
         </div>
