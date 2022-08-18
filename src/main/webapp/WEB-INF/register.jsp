@@ -16,6 +16,12 @@
         <title>ChatApp</title>
     </head>
     <body>
+        <%
+            String message = "";
+            if (request.getAttribute("message") != null) {
+                message = request.getAttribute("message").toString();
+            }
+        %>
         <section class="vh-100" style="background-color: #eee">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -27,7 +33,7 @@
 
                                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                        <form class="mx-1 mx-md-4" action="register/" method="POST">
+                                        <form class="mx-1 mx-md-4" action="register" method="POST">
 
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -56,8 +62,14 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="repassword" type="password" id="repassword" class="form-control" />
-                                                    <label class="form-label" for="repassword">Repeat your password</label>
+                                                    <input name="matchingPassword" type="password" id="matchingPassword" class="form-control" />
+                                                    <label class="form-label" for="matchingPassword">Repeat your password</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <label style="color:red" id="errormessage"><%= message %></label>
                                                 </div>
                                             </div>
 

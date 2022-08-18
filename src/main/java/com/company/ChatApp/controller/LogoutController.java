@@ -21,13 +21,9 @@ import org.springframework.web.servlet.view.RedirectView;
 public class LogoutController {
     @RequestMapping(method=RequestMethod.GET)
     public ModelAndView logout(HttpServletRequest request){
-        ModelAndView mv =null;
-        if(request.getSession().getAttribute("loggedInUser")!=null){
-            request.getSession().removeAttribute("loggedInUser");
-            RedirectView view = new RedirectView("/login", true);
-            view.setExposeModelAttributes(false);
-            mv.setView(view);
-        }
+        ModelAndView mv = new ModelAndView("login");
+        RedirectView view = new RedirectView("/login");
+        mv.setView(view);
         return mv;
     }
     

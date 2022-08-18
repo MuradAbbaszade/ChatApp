@@ -1,59 +1,76 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.company.ChatApp.controller;
 
-import com.company.ChatApp.form.UserForm;
+import com.company.ChatApp.dto.UserDTO;
+import com.company.ChatApp.service.UserService;
 import com.company.entity.User;
-import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 @RequestMapping("/register")
 public class RegisterController {
+
     @Autowired
-    UserDAOService userService;
+    UserService userService;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView showRegisterPage() {
-        ModelAndView mv = new ModelAndView("register");
-        return mv;
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource
+                = new ReloadableResourceBundleMessageSource();
+
+        messageSource.setBasename("classpath:messages");
+        messageSource.setDefaultEncoding("UTF-8");
+        return messageSource;
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/")
-    public ModelAndView register(@ModelAttribute("userForm") @Valid UserForm userForm,BindingResult result,
-            @RequestParam(value = "name", required = false) String name,
-            @RequestParam(value = "email", required = false) String email, 
-            @RequestParam(value = "password", required = false) String password,
-            @RequestParam(value = "repassword", required = false) String repassword,
-            HttpServletRequest request) {
-        ModelAndView mv = null;
-        RedirectView view=null;
-        if (result.hasErrors()|!(password.equals(repassword))|userService.findByEmail(email)) {
-            mv = new ModelAndView("register");
-            view = new RedirectView("/register", true);
-        } else {
-            User user = new User(0,name,email,password);
-            userService.insert(user);
-            request.getSession().setAttribute("loggedInUser",user);
-            mv = new ModelAndView("chat");
-            view = new RedirectView("/chat", true);
+    @GetMapping
+    public String showRegistrationForm(WebRequest request, Model model) {
+        UserDTO userDto = new UserDTO();
+        model.addAttribute("user", userDto);
+        return "register";
+    }
+
+    @PostMapping
+    public ModelAndView registerUserAccount(
+            @ModelAttribute("user") @Valid UserDTO userDto, BindingResult result,
+            HttpServletRequest request) throws Exception {
+        try {
+            if (result.hasErrors()) {
+                Object obj = result.getAllErrors().get(0);
+                ObjectError objectError = null;
+                if (obj instanceof ObjectError) {
+                    objectError = (ObjectError) obj;
+                }
+                String message = messageSource().getMessage(objectError, null);
+                throw new Exception(message);
+            }
+        } catch (Exception ex) {
+            ModelAndView mv = new ModelAndView();
+            mv.addObject("message", ex.getMessage());
+            return mv;
         }
-        view.setExposeModelAttributes(false);
-        mv.setView(view);
-        return mv;
+        try {
+            User registered = userService.registerNewUserAccount(userDto);
+        } catch (Exception ex) {
+            ModelAndView mv = new ModelAndView();
+            mv.addObject("message", ex.getMessage());
+            return mv;
+        }
+        return new ModelAndView("chat", "user", userDto);
     }
-
 }

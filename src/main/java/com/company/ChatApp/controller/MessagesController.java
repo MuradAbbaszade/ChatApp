@@ -14,10 +14,6 @@ public class MessagesController {
     @RequestMapping(method = RequestMethod.GET)
     public String showChatPage(HttpServletRequest request,
             HttpServletResponse response) throws IOException {
-        if (request.getSession().getAttribute("loggedInUser") == null) {
-            return "login";
-        } else {
-            return "messages";
-        }
+        return "messages";
     }
 }

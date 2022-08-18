@@ -15,9 +15,13 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
 
 @Controller
 @RequestMapping("/chat")
@@ -29,17 +33,17 @@ public class ChatController {
         return usersAndMessages;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String showChatPage(HttpServletRequest request,
-            HttpServletResponse response) throws IOException {
-        if (request.getSession().getAttribute("loggedInUser") == null) {
-            return "login";
-        } else {
+    @Controller
+    @RequestMapping("/chat")
+    public class SuccessRegistrationController {
+
+        @GetMapping
+        public String showRegistrationForm(WebRequest request, Model model) {
             return "chat";
         }
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     public void sendMessage(HttpServletRequest request,
             HttpServletResponse response,
             @RequestParam(value = "message", required = false) String message) throws IOException {

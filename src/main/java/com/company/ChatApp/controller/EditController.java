@@ -33,11 +33,7 @@ public class EditController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String showEditPage(HttpServletRequest request) {
-        if (request.getSession().getAttribute("loggedInUser") == null) {
-            return "login";
-        } else {
-            return "edit";
-        }
+        return "edit";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/")
@@ -52,7 +48,7 @@ public class EditController {
         if (result.hasErrors()) {
             mv = new ModelAndView("edit");
             view = new RedirectView("/edit", true);
-        } else if (userService.findByEmail(email) && !(email.equals(user.getEmail()))) {
+        } else if ((userService.findByEmail(email)==null) && !(email.equals(user.getEmail()))) {
             mv = new ModelAndView("edit");
             view = new RedirectView("/edit", true);
         } else {
