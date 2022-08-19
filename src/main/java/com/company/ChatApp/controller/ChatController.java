@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +38,7 @@ public class ChatController {
     @RequestMapping("/chat")
     public class SuccessRegistrationController {
 
-        @GetMapping
+     @GetMapping
         public String showRegistrationForm(WebRequest request, Model model) {
             return "chat";
         }
@@ -45,9 +46,12 @@ public class ChatController {
 
     @PostMapping
     public void sendMessage(HttpServletRequest request,
+            HttpSession session,
             HttpServletResponse response,
             @RequestParam(value = "message", required = false) String message) throws IOException {
-        User user = (User) request.getSession().getAttribute("loggedInUser");
+        session.setAttribute("message", message);
+        response.sendRedirect("messages");
+        /*User user = (User) request.getSession().getAttribute("loggedInUser");
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("d MMM yyyy HH:mm");
@@ -59,6 +63,6 @@ public class ChatController {
         request.getSession()
                 .setAttribute("usersAndMessages", usersAndMessages);
         response.sendRedirect(
-                "chat");
+                "chat");*/
     }
 }

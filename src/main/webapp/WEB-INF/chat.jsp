@@ -47,7 +47,7 @@
 
         <div class="center">
             <div class="container">
-                <form class="form-outline" action="chat" method="POST">
+                <form class="form-outline" action="messages" method="POST">
                     <input style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
                     <br>
                     <button name="send" type="submit"  value="Send" class="btn btn-success btn-rounded float-end">Send</button>

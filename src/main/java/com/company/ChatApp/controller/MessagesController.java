@@ -1,19 +1,20 @@
-
 package com.company.ChatApp.controller;
 
-import java.io.IOException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-@Controller
-@RequestMapping("/messages")
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class MessagesController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String showChatPage(HttpServletRequest request,
-            HttpServletResponse response) throws IOException {
-        return "messages";
+    private List<String> messages = new ArrayList<String>();
+
+    @PostMapping("/messages")
+    public ResponseEntity<List> showChatPage(@RequestParam(value = "message", required = false) String message) {
+        messages.add(message);
+        return ResponseEntity.ok(messages);
     }
 }
