@@ -26,9 +26,8 @@ public class MyUserDetailsService implements UserDetailsService {
             builder.disabled(false);
             builder.password(user.getPassword());
 
-            String[] authoritiesArr = new String[]{"ADMIN", "USER"};
+            String[] authoritiesArr = new String[]{"USER"};
             builder.authorities(authoritiesArr);
-
             return builder.build();
         } else {
             throw new UsernameNotFoundException("Email or password incorrect.");

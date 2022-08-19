@@ -1,4 +1,3 @@
-
 package com.company.ChatApp.controller;
 
 import com.company.ChatApp.dto.UserDTO;
@@ -10,6 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
+import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -71,6 +76,6 @@ public class RegisterController {
             mv.addObject("message", ex.getMessage());
             return mv;
         }
-        return new ModelAndView("chat", "user", userDto);
+        return new ModelAndView("login", "user", userDto);
     }
 }

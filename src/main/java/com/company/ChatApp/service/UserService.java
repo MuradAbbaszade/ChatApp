@@ -3,6 +3,7 @@ package com.company.ChatApp.service;
 import com.company.ChatApp.dto.UserDTO;
 import com.company.daoImpl.UserDAOImpl;
 import com.company.entity.User;
+import java.util.Arrays;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -22,13 +22,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/messages*").permitAll()
-                .antMatchers("/chat*").permitAll()
+                .antMatchers("/messages*").authenticated()
+                .antMatchers("/chat*").authenticated()
+                .antMatchers("/edit*").authenticated()
                 .antMatchers("/login*").permitAll()
                 .antMatchers("/register*").permitAll()
                 .anyRequest().authenticated()
@@ -40,7 +42,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutUrl("/logout");
-                
 
     }
 

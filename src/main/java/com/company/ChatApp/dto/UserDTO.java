@@ -18,6 +18,15 @@ public class UserDTO {
     @Size(min = 3, max = 25, message = "Password size must be between 3 and 25")
     private String password;
     private String matchingPassword;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public UserDTO() {
     }
