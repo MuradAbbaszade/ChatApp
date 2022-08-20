@@ -24,7 +24,7 @@
 }
 .menu-bar{
     list-style-type:none;
-    
+
 }
 .menu-item:hover{
     color:gray; 
@@ -46,4 +46,8 @@
 .profile-menu{
     margin-left: 1250px;
     margin-top: 50px;
+}
+#messages {
+    margin: 0 auto;
+    overflow-y: scroll;
 }

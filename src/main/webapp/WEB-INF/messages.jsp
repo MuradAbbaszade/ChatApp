@@ -16,19 +16,27 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <script>
-            var arr =[{"id":6,"name":"murad",surname:"abbaszade"},{"id":7,"name":"darum",surname:"abbaszade"}];
-            function getUsers(){
-                for(var i=0;i<arr.length;i++){
+            function loadDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function () {
+                    var response =  JSON.parse(this.responseText);
+                    var list = response;
+                    printMessages(list);
+                }
+                xhttp.open("GET", "http://localhost:8081/ChatAppWeb/message");
+                xhttp.send();
+            }
+            function printMessages(arr) {
+                for (var i = 0; i < arr.length; i++) {
                     var obj = arr[i];
-                    var str = obj.id+" "+obj.name+" "+obj.surname;
-                    document.getElementById('container').innerHTML+=str;
+                    document.getElementById('container').innerHTML += obj.date+" "+obj.name+" "+obj.message;
                 }
             }
         </script>
     </head>
-    <body onload="getUsers()">
+    <body onload="loadDoc()">
         <div id="container"></div>
     </body>
 </html>
