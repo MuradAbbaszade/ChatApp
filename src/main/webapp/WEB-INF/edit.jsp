@@ -47,14 +47,14 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="name" id="name" class="form-control" value="<%=EditController.getRemoteUser().getName()%>">
+                                                    <input name="name" id="name" class="form-control" value="">
                                                     <label class="form-label" for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.getRemoteUser().getEmail()%>"/>
+                                                    <input name="email" type="email" id="email" class="form-control" value=""/>
                                                     <label class="form-label" for="email">Your Email</label>
                                                 </div>
                                             </div>
@@ -63,8 +63,6 @@
                                                     <label style="color:red" id="errormessage"><%= message%></label>
                                                 </div>
                                             </div>
-                                            <input name="password" type="hidden" id="password" class="form-control" value="notempty" />
-                                            <input name="matchingPassword" type="hidden" id="matchingPassword" class="form-control" value="notempty" />
                                             <div style="margin-top:50px "class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                 <button style="margin-left:21px" class="btn btn-danger btn-lg"><a style="color: white;text-decoration: none" href="chat">Back</a></button>
                                                 <button style="margin-left:195px" type="submit" class="btn btn-success btn-lg">Confirm</button>

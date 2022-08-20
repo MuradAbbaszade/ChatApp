@@ -63,6 +63,7 @@
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String strDate = sdf.format(d);
+        System.out.println(request.getAttribute("userDto"));
     %>
     <body onload="loadDoc()" ontimeupdate="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
         <div class="profile-menu">
