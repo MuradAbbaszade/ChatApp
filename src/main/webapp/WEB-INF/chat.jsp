@@ -36,7 +36,7 @@
                     var list = response;
                     printMessages(list);
                 }
-                xhttp.open("GET", "http://localhost:8081/ChatAppWeb/message");
+                xhttp.open("GET", "http://localhost:8081/ChatAppWeb/messages");
                 xhttp.send();
             }
             function printMessages(arr) {
@@ -80,10 +80,10 @@
         </div>
         <div class="center">
             <div class="container">
-                <div id="messages" class="container" onload="this.scrollTo(0, 800)" style="height:500px">
+                <div id="messages" class="container" style="height:500px">
 
                 </div>
-                <form class="form-outline" action="message" method="POST">
+                <form class="form-outline" action="messages" method="POST">
                     <input type="hidden" name="email" id="email" value=<%=request.getRemoteUser()%> />
                     <input type="hidden" name="date" id="date" value=<%=strDate%> />
                     <input style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>

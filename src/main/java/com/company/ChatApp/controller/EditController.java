@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package com.company.ChatApp.controller;
-
-import com.company.ChatApp.form.UserForm;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +22,7 @@ import org.springframework.web.servlet.view.RedirectView;
  *
  * @author roma-cervice
  */
-@Controller
+/*@Controller
 @RequestMapping("/edit")
 public class EditController {
 
@@ -71,4 +69,4 @@ public class EditController {
         User user = (User) request.getSession().getAttribute("loggedInUser");
         return user.getEmail();
     }
-}
+}*/
