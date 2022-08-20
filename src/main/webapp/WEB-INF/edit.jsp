@@ -5,6 +5,9 @@
 --%>
 
 <%@page import="com.company.ChatApp.controller.EditController"%>
+<%@page import="com.company.ChatApp.dto.UserDTO"%>
+<%@page import="org.springframework.beans.factory.annotation.Autowired"%>
+<%@page import="com.company.service.UserDAOService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,6 +25,12 @@
         <title>ChatApp</title>
     </head>
     <body>
+        <%
+            String message = "";
+            if (request.getAttribute("message") != null) {
+                message = request.getAttribute("message").toString();
+            }
+        %>
         <section class="vh-100" style="background-color: #eee;">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -33,24 +42,29 @@
 
                                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Profile</p>
 
-                                        <form class="mx-1 mx-md-4" method="POST" action="edit/">
+                                        <form class="mx-1 mx-md-4" method="POST" action="edit">
 
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="name" id="name" class="form-control" value="<%=EditController.getLoggedInUserName(request)%>">
+                                                    <input name="name" id="name" class="form-control" value="<%=EditController.getRemoteUser().getName()%>">
                                                     <label class="form-label" for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.getLoggedInUserEmail(request)%>"/>
+                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.getRemoteUser().getEmail()%>"/>
                                                     <label class="form-label" for="email">Your Email</label>
                                                 </div>
                                             </div>
-                                            <input name="password" type="hidden" id="password" class="form-control" value="notempty"/>
-                                            <input name="repassword" type="hidden" id="repassword" class="form-control" value="notempty"/>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <label style="color:red" id="errormessage"><%= message%></label>
+                                                </div>
+                                            </div>
+                                            <input name="password" type="hidden" id="password" class="form-control" value="notempty" />
+                                            <input name="matchingPassword" type="hidden" id="matchingPassword" class="form-control" value="notempty" />
                                             <div style="margin-top:50px "class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                 <button style="margin-left:21px" class="btn btn-danger btn-lg"><a style="color: white;text-decoration: none" href="chat">Back</a></button>
                                                 <button style="margin-left:195px" type="submit" class="btn btn-success btn-lg">Confirm</button>

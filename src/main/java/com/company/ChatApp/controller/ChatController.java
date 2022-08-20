@@ -14,13 +14,8 @@ import org.springframework.web.context.request.WebRequest;
 @RequestMapping("/chat")
 public class ChatController {
 
-    @Controller
-    @RequestMapping("/chat")
-    public class SuccessRegistrationController {
-
      @GetMapping
-        public String showRegistrationForm(WebRequest request, Model model) {
+        public String showChatPage(WebRequest request, Model model) {
             return "chat";
         }
-    }
 }

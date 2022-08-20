@@ -1,72 +1,75 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.company.ChatApp.controller;
+
+import com.company.ChatApp.dto.UserDTO;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
-/**
- *
- * @author roma-cervice
- */
-/*@Controller
+@Controller
 @RequestMapping("/edit")
 public class EditController {
 
     @Autowired
     UserDAOService userService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    private static User u = null;
+
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource
+                = new ReloadableResourceBundleMessageSource();
+
+        messageSource.setBasename("classpath:messages");
+        messageSource.setDefaultEncoding("UTF-8");
+        return messageSource;
+    }
+
+    @GetMapping
     public String showEditPage(HttpServletRequest request) {
+        u = userService.findByEmail(request.getRemoteUser());
         return "edit";
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/")
+    @PostMapping
     public ModelAndView edit(HttpServletRequest request,
-            @ModelAttribute("userForm") @Valid UserForm userForm, BindingResult result,
-            @RequestParam(value = "name", required = false) String name,
-            @RequestParam(value = "email", required = false) String email) {
-        ModelAndView mv = null;
-        RedirectView view = null;
-        User user = (User) request.getSession().getAttribute("loggedInUser");
-
-        if (result.hasErrors()) {
-            mv = new ModelAndView("edit");
-            view = new RedirectView("/edit", true);
-        } else if ((userService.findByEmail(email)==null) && !(email.equals(user.getEmail()))) {
-            mv = new ModelAndView("edit");
-            view = new RedirectView("/edit", true);
-        } else {
-            user.setName(name);
-            user.setEmail(email);
-            userService.update(user);
-            mv = new ModelAndView("chat");
-            view = new RedirectView("/chat", true);
+            @ModelAttribute("user") @Valid UserDTO userDto, BindingResult result) {
+        try {
+            if (result.hasErrors()) {
+                Object obj = result.getAllErrors().get(0);
+                ObjectError objectError = null;
+                if (obj instanceof ObjectError) {
+                    objectError = (ObjectError) obj;
+                }
+                String message = messageSource().getMessage(objectError, null);
+                throw new Exception(message);
+            }
+        } catch (Exception ex) {
+            ModelAndView mv = new ModelAndView();
+            mv.addObject("message", ex.getMessage());
+            return mv;
         }
-        mv.setView(view);
-        return mv;
+        User user = getRemoteUser();
+        user.setName(userDto.getName());
+        user.setEmail(userDto.getEmail());
+        user.setPassword(userDto.getPassword());
+        userService.update(user);
+        return new ModelAndView("chat", "user", userDto);
     }
 
-    public static String getLoggedInUserName(HttpServletRequest request) {
-        User user = (User) request.getSession().getAttribute("loggedInUser");
-        return user.getName();
+    public static User getRemoteUser() {
+        return u;
     }
-
-    public static String getLoggedInUserEmail(HttpServletRequest request) {
-        User user = (User) request.getSession().getAttribute("loggedInUser");
-        return user.getEmail();
-    }
-}*/
+}

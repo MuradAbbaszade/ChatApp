@@ -36,7 +36,7 @@ public class MessagesController {
     }
     
     @GetMapping("/messages")
-    public ResponseEntity<List> showMessages() {
+    public ResponseEntity<List> showMessages(HttpServletResponse response) throws IOException {
         return ResponseEntity.ok(messages);
     }
 }

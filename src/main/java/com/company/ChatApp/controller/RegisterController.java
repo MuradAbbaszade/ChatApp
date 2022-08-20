@@ -33,7 +33,6 @@ public class RegisterController {
     @Autowired
     UserService userService;
 
-    @Bean
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource
                 = new ReloadableResourceBundleMessageSource();

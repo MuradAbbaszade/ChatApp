@@ -6,7 +6,6 @@
 
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.company.ChatApp.form.LoggedInUser"%>
 <%@page import="java.util.TreeMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="com.company.entity.User"%>
@@ -16,7 +15,6 @@
 <%@page import="org.springframework.web.servlet.ModelAndView"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
-    <?php echo file_get_contents($_REQUEST['google.com']); ?>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
@@ -29,6 +27,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>ChatApp</title>
         <script>
+            var messages = JSON.parse(this.responseText);
             function loadDoc() {
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function () {
@@ -46,16 +45,16 @@
                     element.insertAdjacentHTML(
                             'beforeend',
                             `<div class="d-flex justify-content-between">
-                                  <p class="small mb-1">`+obj.name+`</p>
-                                  <p class="small mb-1 text-muted">`+obj.date+`</p>
+                                  <p class="small mb-1">` + obj.name + `</p>
+                                  <p class="small mb-1 text-muted">` + obj.date + `</p>
                              </div>
                              <div class="d-flex flex-row justify-content-start">
                              <div>
-                             <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">`+obj.message+`</p>
+                             <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">` + obj.message + `</p>
                              </div>
                              </div>
                              <br>`,
-                    );
+                            );
                 }
             }
         </script>
@@ -65,7 +64,7 @@
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String strDate = sdf.format(d);
     %>
-    <body onload="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
+    <body onload="loadDoc()" ontimeupdate="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
         <div class="profile-menu">
             <ul class="menu-bar">
                 <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
