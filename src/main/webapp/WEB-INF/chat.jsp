@@ -21,8 +21,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>ChatApp</title>
         <script>
-            setInterval(loadDoc,1000);
+            
             var j = 0;
+            setInterval(loadDoc,1000);
             function loadDoc() {
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function () {
@@ -48,7 +49,7 @@
                              </div>
                              <div class="d-flex flex-row justify-content-start">
                              <div>
-                             <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">` + obj.message + `</p>
+                             <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7">` + obj.message + `</p>
                              </div>
                              </div>
                              <br>`,
@@ -58,11 +59,11 @@
     </head>
     <%
         Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy:HH:mm");
         String strDate = sdf.format(d);
         System.out.println(request.getAttribute("userDto"));
     %>
-    <body onload="loadDoc()" ontimeupdate="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
+    <body onload="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
         <div class="profile-menu">
             <ul class="menu-bar">
                 <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
@@ -79,10 +80,11 @@
             <div class="container">
                 <div id="messages" class="container" style="height:500px">
                 </div>
+                <br>
                 <form class="form-outline" action="messages" method="POST">
                     <input type="hidden" name="email" id="email" value=<%=request.getRemoteUser()%> />
                     <input type="hidden" name="date" id="date" value=<%=strDate%> />
-                    <input style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
+                    <input maxlength="125" style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
                     <br>
                     <button name="send" type="submit"  value="Send" class="btn btn-success btn-rounded float-end">Send</button>
                 </form>

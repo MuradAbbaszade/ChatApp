@@ -49,5 +49,7 @@
 }
 #messages {
     margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
     overflow-y: scroll;
 }

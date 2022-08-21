@@ -28,11 +28,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/messages*").authenticated()
                 .antMatchers("/chat*").authenticated()
                 .antMatchers("/edit*").authenticated()
                 .antMatchers("/login*").permitAll()
                 .antMatchers("/register*").permitAll()
+                .antMatchers("/messages*").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
