@@ -28,10 +28,8 @@ public class EditController {
     @Autowired
     UserDAOService userService;
 
-    @GetMapping
-    public String showEditPage(HttpServletRequest request) {
-        return "edit";
-    }
+    public static String remoteUserName;
+    public static String remoteUserEmail;
 
     @Bean
     public MessageSource messageSource() {
@@ -43,15 +41,25 @@ public class EditController {
         return messageSource;
     }
 
+    @GetMapping
+    public String showEditPage(HttpServletRequest request) {
+        remoteUserEmail = request.getRemoteUser();
+        User user = userService.findByEmail(remoteUserEmail);
+        remoteUserName = user.getName();
+        return "edit";
+    }
+
     @PostMapping
     public ModelAndView edit(HttpServletRequest request,
             @ModelAttribute("userForm") @Valid EditUserDTO editUserDto, BindingResult result,
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "email", required = false) String email) {
+
         ModelAndView mv = null;
         RedirectView view = null;
-        String remoteUserEmail = request.getRemoteUser();
+        remoteUserEmail = request.getRemoteUser();
         User user = userService.findByEmail(remoteUserEmail);
+        remoteUserName = user.getName();
 
         try {
             if (result.hasErrors()) {
@@ -63,7 +71,7 @@ public class EditController {
                 String message = messageSource().getMessage(objectError, null);
                 throw new Exception(message);
             }
-        }catch (Exception ex) {
+        } catch (Exception ex) {
             mv = new ModelAndView("edit");
             mv.addObject("message", ex.getMessage());
             return mv;

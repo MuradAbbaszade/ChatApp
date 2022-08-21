@@ -47,15 +47,16 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="name" id="name" class="form-control" value="">
+                                                    <input name="name" id="name" class="form-control" value="<%=EditController.remoteUserName%>">
                                                     <label class="form-label" for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="email" type="email" id="email" class="form-control" value=""/>
+                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.remoteUserEmail%>"/>
                                                     <label class="form-label" for="email">Your Email</label>
+                                                    <label style="color:gray;font-size:15px" class="form-label" for="email">If you change your email you will need to login again</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">

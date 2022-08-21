@@ -1,6 +1,22 @@
 package com.company.ChatApp.dto;
 
 public class MessageDTO {
+    private String email;
+
+    public MessageDTO(String email, String name, String message, String date) {
+        this.email = email;
+        this.name = name;
+        this.message = message;
+        this.date = date;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     private String name;
     private String message;
     private String date;

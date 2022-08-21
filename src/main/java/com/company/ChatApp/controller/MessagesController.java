@@ -29,7 +29,7 @@ public class MessagesController {
             HttpServletResponse response ) throws IOException{
         User user = userService.findByEmail(email);
         String name = user.getName();
-        MessageDTO messageDto = new MessageDTO(name,message,date);
+        MessageDTO messageDto = new MessageDTO(email,name,message,date);
         messages.add(messageDto);
         response.sendRedirect("chat");
         return ResponseEntity.ok(messages);

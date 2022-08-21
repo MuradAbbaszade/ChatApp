@@ -1,9 +1,3 @@
-<%-- 
-    Document   : chat.jsp
-    Created on : Aug 5, 2022, 11:09:05 AM
-    Author     : roma-cervice
---%>
-
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.TreeMap"%>
@@ -27,24 +21,28 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>ChatApp</title>
         <script>
-            var messages = JSON.parse(this.responseText);
+            setInterval(loadDoc,1000);
+            var j = 0;
             function loadDoc() {
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function () {
                     var response = JSON.parse(this.responseText);
                     var list = response;
-                    printMessages(list);
+                    for (var i = j; i < list.length; i++) {
+                        var message = list[i];
+                        printMessage(message);
+                    }
+                    j = list.length;
                 }
                 xhttp.open("GET", "http://localhost:8081/ChatAppWeb/messages");
                 xhttp.send();
             }
-            function printMessages(arr) {
-                for (var i = 0; i < arr.length; i++) {
-                    var obj = arr[i];
-                    var element = document.getElementById('messages');
-                    element.insertAdjacentHTML(
-                            'beforeend',
-                            `<div class="d-flex justify-content-between">
+            function printMessage(message) {
+                var obj = message;
+                var element = document.getElementById('messages');
+                element.insertAdjacentHTML(
+                        'beforeend',
+                        `<div class="d-flex justify-content-between">
                                   <p class="small mb-1">` + obj.name + `</p>
                                   <p class="small mb-1 text-muted">` + obj.date + `</p>
                              </div>
@@ -54,8 +52,7 @@
                              </div>
                              </div>
                              <br>`,
-                            );
-                }
+                        );
             }
         </script>
     </head>
@@ -81,7 +78,6 @@
         <div class="center">
             <div class="container">
                 <div id="messages" class="container" style="height:500px">
-
                 </div>
                 <form class="form-outline" action="messages" method="POST">
                     <input type="hidden" name="email" id="email" value=<%=request.getRemoteUser()%> />
