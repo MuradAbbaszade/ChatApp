@@ -24,15 +24,42 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/users.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script>
+            function loadDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function () {
+                    var response = JSON.parse(this.responseText);
+                    var list = response;
+                    for (var i = 0; i < list.length; i++) {
+                        var user = list[i];
+                        printUser(user);
+                    }
+                }
+                xhttp.open("GET", "http://localhost:8081/ChatAppWeb/userslist");
+                xhttp.send();
+            }
+            function printUser(user) {
+                var obj = user;
+                var element = document.getElementById('users');
+                element.insertAdjacentHTML(
+                        'beforeend',
+                        `<div class="d-flex justify-content-between">
+                          <p class="small mb-1">` + obj.name + `</p>
+                     </div>
+                     <br>`,
+                        );
+            }
+        </script>
     </head>
-    <body>
+    <body onload="loadDoc()">
         <div class="search">        
-            <form method="POST" action="users">
+            <form method="GET" action="users">
                 <input class="input" type="text" name="name" id="name" value="" placeholder="Name">
                 <button title="Search" class="operations_button" type="submit" name="search" id="search" value="Search">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
         </div>
+        <div id="users">burda:</div>
     </body>
 </html>

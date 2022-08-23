@@ -76,5 +76,5 @@
                 </li>
             </ul>
         </div>
-            <iframe src="http://localhost:8081/ChatAppWeb/message-page"></iframe>
+            <iframe src="http://localhost:8081/ChatAppWeb/message-"></iframe>
     </body>
