@@ -1,5 +1,6 @@
 package com.company.ChatApp.controller;
 
+import com.company.ChatApp.dto.UserDTO;
 import com.company.entity.User;
 import com.company.service.UserDAOService;
 import java.util.ArrayList;
@@ -16,17 +17,21 @@ public class UserPageController {
 
     @Autowired
     UserDAOService userService;
-
-    private List<User> users = new ArrayList<User>();
-
-    @GetMapping("/users")
+    private List<UserDTO> usersList = new ArrayList<UserDTO>();
+    
+    @GetMapping("/userslist")
     public ResponseEntity<List> getUsers() {
-        return ResponseEntity.ok(users);
+        return ResponseEntity.ok(usersList);
     }
 
     @PostMapping("/users")
     public ResponseEntity<List> setUsers() {
-        users = userService.getAll();
-        return ResponseEntity.ok(users);
+        List<User> users  = userService.getAll();
+        for(User user : users){
+            UserDTO userDTO = new UserDTO();
+            userDTO.setName(user.getName());
+            usersList.add(userDTO);
+        }
+        return ResponseEntity.ok(usersList);
     }
 }
