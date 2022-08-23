@@ -1,15 +1,14 @@
-<%@page import="java.util.Date"%>
+<%-- 
+    Document   : messages
+    Created on : Aug 23, 2022, 12:51:19 PM
+    Author     : roma-cervice
+--%>
+
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.TreeMap"%>
-<%@page import="java.util.Map"%>
-<%@page import="com.company.entity.User"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="javax.validation.OverridesAttribute.List"%>
-<%@page import="org.springframework.web.servlet.view.RedirectView"%>
-<%@page import="org.springframework.web.servlet.ModelAndView"%>
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
@@ -62,19 +61,18 @@
         Date d = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy:HH:mm");
         String strDate = sdf.format(d);
+        System.out.println(request.getAttribute("userDto"));
     %>
-    <body onload="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
-        <div class="profile-menu">
-            <ul class="menu-bar">
-                <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
-                    <ul class="sub-menu menu-bar">
-                        <li><a class="menu-item fa fa-pencil" style="font-size:20px" href="edit"> Edit</a></li>
-                        <form method="GET" action="logout">
-                            <li><button type="submit" class="menu-item fa fa-sign-out" style="font-size:20px"> Logout</button></li>
-                        </form>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-            <iframe src="http://localhost:8081/ChatAppWeb/message-page"></iframe>
+    <body class="container " onload="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
+                <div id="messages" class="container" style="height:500px">
+                </div>
+                <br>
+                <form class="form-outline container" action="messages" method="POST">
+                    <input type="hidden" name="email" id="email" value=<%=request.getRemoteUser()%> />
+                    <input type="hidden" name="date" id="date" value=<%=strDate%> />
+                    <input maxlength="125" style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
+                    <br>
+                    <button name="send" type="submit"  value="Send" class="btn btn-success btn-rounded float-end">Send</button>
+                </form>
     </body>
+</html>
