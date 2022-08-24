@@ -26,26 +26,11 @@
         <link rel="stylesheet" href="assets/users.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
-    <script>
-        function changeButtonToDelete(id) {
-            var element = document.getElementById(id);
-            element.innerHTML = '<button data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete Friend Request</button>'
-        }
-        function changeButtonToSend(id) {
-            var element = document.getElementById(id);
-            element.innerHTML = '<button class="btn btn-primary" onclick="changeButtonToDelete("id")">Send Friend Request</button>'
-        }
-
-        $(document).on("click", ".open-exampleModal", function () {
-            var myBookId = $(this).data('id');
-            $(".modal-body #bookId").val(myBookId);
-        });
-    </script>
     <body>
         <div class="container center" style="">
             <div class="search">        
-                <form method="GET" action="users">
-                    <input class="input" type="text" name="name" id="name" value="" placeholder="Name">
+                <form method="GET" action="searchuser">
+                    <input class="input" type="text" name="name" id="name" value="" placeholder="Enter name..">
                     <button style="background-color:transparent;border:0" title="Search" class="operations_button" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
@@ -60,30 +45,15 @@
                     <tr>
                         <td>${u.name}</td>
                     </tr>
-                    <tr>
-                    <span id="${u.id}"><button class="btn btn-primary" onclick="changeButtonToDelete('${u.id}')">Send Friend Request</button></span>
-                    </tr>
-                    <br>
-                    <br>
+                    <c:choose>
+                        <c:when test="${remoteUserId==u.id}">
+                            <tr>
+                            <span id="${u.id}"><button class="btn btn-primary" >Send Friend Request</button></span>
+                            </tr>
+                        </c:when>
+                    </c:choose>
+                    <br><br>
                 </c:forEach>
-            </div>
-        </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Are you sure ? </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <form action="users" method="GET">
-                            <button onclick="changeButtonToSend('34')" name="delete" value="Delete" class="btn btn-danger">Delete</button>
-                            <form>
-                    </div>
-                </div>
             </div>
         </div>
     </body>
