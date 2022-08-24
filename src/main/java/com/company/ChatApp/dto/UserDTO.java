@@ -9,6 +9,15 @@ import javax.validation.constraints.Size;
 @PasswordMatches
 public class UserDTO {
 
+    private int id ;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     @NotEmpty(message = "Please fill the all fields")
     @Size(min = 2, max = 15, message = "Name size must be between 2 and 15")
     private String name;

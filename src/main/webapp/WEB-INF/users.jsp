@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="java.lang.Exception"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -24,42 +25,66 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/users.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script>
-            function loadDoc() {
-                const xhttp = new XMLHttpRequest();
-                xhttp.onload = function () {
-                    var response = JSON.parse(this.responseText);
-                    var list = response;
-                    for (var i = 0; i < list.length; i++) {
-                        var user = list[i];
-                        printUser(user);
-                    }
-                }
-                xhttp.open("GET", "http://localhost:8081/ChatAppWeb/userslist");
-                xhttp.send();
-            }
-            function printUser(user) {
-                var obj = user;
-                var element = document.getElementById('users');
-                element.insertAdjacentHTML(
-                        'beforeend',
-                        `<div class="d-flex justify-content-between">
-                          <p class="small mb-1">` + obj.name + `</p>
-                     </div>
-                     <br>`,
-                        );
-            }
-        </script>
     </head>
-    <body onload="loadDoc()">
-        <div class="search">        
-            <form method="GET" action="users">
-                <input class="input" type="text" name="name" id="name" value="" placeholder="Name">
-                <button title="Search" class="operations_button" type="submit" name="search" id="search" value="Search">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+    <script>
+        function changeButtonToDelete(id) {
+            var element = document.getElementById(id);
+            element.innerHTML = '<button data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete Friend Request</button>'
+        }
+        function changeButtonToSend(id) {
+            var element = document.getElementById(id);
+            element.innerHTML = '<button class="btn btn-primary" onclick="changeButtonToDelete("id")">Send Friend Request</button>'
+        }
+
+        $(document).on("click", ".open-exampleModal", function () {
+            var myBookId = $(this).data('id');
+            $(".modal-body #bookId").val(myBookId);
+        });
+    </script>
+    <body>
+        <div class="container center" style="">
+            <div class="search">        
+                <form method="GET" action="users">
+                    <input class="input" type="text" name="name" id="name" value="" placeholder="Name">
+                    <button style="background-color:transparent;border:0" title="Search" class="operations_button" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <br>
+            <div>            
+                <c:forEach items="${users}" var="u">
+                    <tr>
+                        <td>#${u.id}</td>
+                    </tr>
+                    <tr>
+                        <td>${u.name}</td>
+                    </tr>
+                    <tr>
+                    <span id="${u.id}"><button class="btn btn-primary" onclick="changeButtonToDelete('${u.id}')">Send Friend Request</button></span>
+                    </tr>
+                    <br>
+                    <br>
+                </c:forEach>
+            </div>
         </div>
-        <div id="users">burda:</div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure ? </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <form action="users" method="GET">
+                            <button onclick="changeButtonToSend('34')" name="delete" value="Delete" class="btn btn-danger">Delete</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
