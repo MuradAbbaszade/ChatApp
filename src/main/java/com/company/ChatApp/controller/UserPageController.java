@@ -73,6 +73,7 @@ public class UserPageController {
         String remoteUserEmail = request.getRemoteUser();
         int remoteUserId = userService.findByEmail(remoteUserEmail).getId();
         ModelAndView mv = new ModelAndView("users");
+        mv.addObject("name",name);
         mv.addObject("friends", friendsDTO);
         mv.addObject("requests", friendRequestsDTO);
         mv.addObject("users", usersList);

@@ -20,7 +20,8 @@ public class FriendRequestController {
     public ModelAndView getRequestButton(HttpServletResponse response,
             @RequestParam(value = "button", required = false) String button,
             @RequestParam(value = "fromUserId", required = false) int fromUserId,
-            @RequestParam(value = "toUserId", required = false) int toUserId) throws IOException {
+            @RequestParam(value = "toUserId", required = false) int toUserId,
+            @RequestParam(value = "name", required = false) String name) throws IOException {
         if (button.equals("send")) {
             System.out.println(fromUserId + " " + toUserId);
             friendService.sendFriendRequest(fromUserId, toUserId);
@@ -38,7 +39,8 @@ public class FriendRequestController {
             friendService.deleteFriend(friendId);
         }
         ModelAndView mv = new ModelAndView("users");
-        RedirectView view = new RedirectView("users");
+        if(name==null) name="";
+        RedirectView view = new RedirectView("users?name="+name);
         mv.setView(view);
         return mv;
     }
