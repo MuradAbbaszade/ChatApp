@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -23,22 +24,20 @@ import org.springframework.web.servlet.ModelAndView;
  *
  * @author roma-cervice
  */
-@RestController
+@Controller
 public class FriendRequestController {
     @Autowired
     FriendDAOService friendService;
     
-    List<FriendRequestDTO> requests = new ArrayList<FriendRequestDTO>();
     @GetMapping("friend-requests")
-    public ResponseEntity<List> showRequests(HttpServletResponse response) throws IOException {
-        List<FriendRequest> friendRequests = friendService.getAllRequest();
-        for(FriendRequest request : friendRequests){
-            int id = request.getId();
-            int fromUserId = request.getFromUser().getId();
-            int toUserId = request.getToUser().getId();
-            FriendRequestDTO requestDTO = new FriendRequestDTO(id,fromUserId,toUserId);
-            requests.add(requestDTO);
+    public void showRequests(HttpServletResponse response,
+            @RequestParam(value="button",required=false)String button,
+            @RequestParam(value="fromUserId",required=false)int fromUserId,
+            @RequestParam(value="toUserId",required=false)int toUserId) throws IOException{
+        if(button.equals("send")){
+            System.out.println(fromUserId+" "+toUserId);
+            friendService.sendFriendRequest(fromUserId,toUserId);
         }
-        return ResponseEntity.ok(requests);
+        response.sendRedirect("users");
     }
 }

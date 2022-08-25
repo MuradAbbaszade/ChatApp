@@ -1,7 +1,10 @@
 package com.company.ChatApp.controller;
 
+import com.company.ChatApp.dto.FriendRequestDTO;
 import com.company.ChatApp.dto.UserDTO;
+import com.company.entity.FriendRequest;
 import com.company.entity.User;
+import com.company.service.FriendDAOService;
 import com.company.service.UserDAOService;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +20,9 @@ public class UserPageController {
 
     @Autowired
     UserDAOService userService;
+
+    @Autowired
+    FriendDAOService friendService;
 
     @GetMapping("searchuser")
     public ModelAndView searchUsers(HttpServletRequest request,
@@ -59,9 +65,19 @@ public class UserPageController {
                 usersList.add(userDTO);
             }
         }
-        String remoteUserEmail =  request.getRemoteUser();
-        int remoteUserId =  userService.findByEmail(remoteUserEmail).getId();
+        List<FriendRequestDTO> friendRequestsDTO = new ArrayList<FriendRequestDTO>();
+        List<FriendRequest> friendRequests = friendService.getAllRequest();
+        for(FriendRequest friendRequest : friendRequests){
+            int id = friendRequest.getId();
+            int fromUserId = friendRequest.getFromUser().getId();
+            int toUserId = friendRequest.getToUser().getId();
+            FriendRequestDTO requestDTO = new FriendRequestDTO(id,fromUserId,toUserId);
+            friendRequestsDTO.add(requestDTO);
+        }
+        String remoteUserEmail = request.getRemoteUser();
+        int remoteUserId = userService.findByEmail(remoteUserEmail).getId();
         ModelAndView mv = new ModelAndView("users");
+        mv.addObject("requests", friendRequestsDTO);
         mv.addObject("users", usersList);
         mv.addObject("remoteUserId", remoteUserId);
         return mv;

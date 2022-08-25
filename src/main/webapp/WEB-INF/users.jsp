@@ -37,22 +37,53 @@
                 </form>
             </div>
             <br>
-            <div>            
+            <div>
                 <c:forEach items="${users}" var="u">
-                    <tr>
-                        <td>#${u.id}</td>
-                    </tr>
-                    <tr>
-                        <td>${u.name}</td>
-                    </tr>
+                    <c:set var="deleteButton" scope="request" value="false"/>
+                    <c:set var="sendButton" scope="request" value="false"/>
+                    <c:set var="acceptButton" scope="request" value="false"/>
+                    <c:forEach items="${requests}" var="r">
+                        <c:choose>
+                            <c:when test="${remoteUserId==r.fromUserId && u.id==r.toUserId}">
+                                <c:set var="deleteButton" scope="request" value="true"/>
+                            </c:when>
+                            <c:when test="${remoteUserId==r.toUserId && u.id==r.fromUserId}">
+                                <c:set var="acceptButton" scope="request" value="true"/>
+                            </c:when>
+                        </c:choose>
+                    </c:forEach>
                     <c:choose>
-                        <c:when test="${remoteUserId==u.id}">
+                        <c:when test="${deleteButton}">
                             <tr>
-                            <span id="${u.id}"><button class="btn btn-primary" >Send Friend Request</button></span>
+                            <form method="GET" action="friend-requests">
+                                <td>#${u.id}</td>
+                                <td>${u.name}</td>
+                                <span id="${u.id}">
+                                    <button class="btn btn-danger">Delete Friend Request</button>
+                                </span> 
+                            </form>
                             </tr>
                         </c:when>
-                    </c:choose>
-                    <br><br>
+                        <c:when test="${acceptButton}">
+                            <tr>
+                            <span id="${u.id}"><button class="btn btn-success" >Accept Friend Request</button></span>
+                            </tr>
+                        </c:when>
+                        <c:otherwise>
+                            <tr>
+                            <form method="GET" action="friend-requests">
+                                <input type="hidden" value="send" name="button"/>
+                                <input type="hidden" value=${remoteUserId} name="fromUserId"/>
+                                <input type="hidden" value=${u.id} name="toUserId"/>
+                                <td>#${u.id}</td>
+                                <td>${u.name}</td>
+                                <span id="${u.id}">
+                                    <button class="btn btn-primary">Send Friend Request</button>
+                                </span> 
+                            </form>
+                            </tr>
+                        </c:otherwise>
+                    </c:choose><br>
                 </c:forEach>
             </div>
         </div>
