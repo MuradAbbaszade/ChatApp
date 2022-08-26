@@ -1,7 +1,5 @@
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.TreeMap"%>
-<%@page import="java.util.Map"%>
 <%@page import="com.company.entity.User"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="javax.validation.OverridesAttribute.List"%>

@@ -22,19 +22,22 @@
         <style>
             <%@ include file="assets/main.css"%>
         </style>
+        <style>
+            <%@ include file="assets/searchpage.css"%>
+        </style>
     </head>
-    <body style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
-        <div style="margin-top:100px" class="main">
+    <body>
+        <div class="main">
             <div>        
                 <form class="search" method="GET" action="users">
-                    <input class="form-control" style="width:200px;display:inline" type="text" name="name" id="name"  placeholder="Enter name..">
-                    <button style="background-color:transparent;border:0" title="Search" class="operations_button" type="submit">
+                    <input class="form-control" type="text" name="name" id="name"  placeholder="Enter name..">
+                    <button title="Search" class="operations_button" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
             </div>
             <br>
-            <div class="col-12">
+            <div style="height:400px">
                 <c:forEach items="${users}" var="u">
                     <c:set var="deleteButton" scope="request" value="false"/>
                     <c:set var="sendButton" scope="request" value="false"/>
@@ -113,6 +116,7 @@
                     </c:choose><br>
                 </c:forEach>
             </div>
+             <a style="color:white;font-family: arial;margin-top: 18px;margin-right: 670px" class="btn btn-danger" href="main">Back</a>
         </div>
     </body>
 </html>

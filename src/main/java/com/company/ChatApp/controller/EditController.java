@@ -91,8 +91,8 @@ public class EditController {
                 return mv;
             }
             userService.update(user);
-            mv = new ModelAndView("chat");
-            view = new RedirectView("/chat", true);
+            mv = new ModelAndView("main");
+            view = new RedirectView("/main", true);
         }
         mv.setView(view);
         return mv;

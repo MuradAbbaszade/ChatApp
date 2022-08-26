@@ -1,0 +1,36 @@
+body{
+    font-family: Georgia, Times, serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:684px;
+    width: 100%;
+    background-image:url('http://cdn.shopify.com/s/files/1/0426/9209/articles/envia-y-recibe-mensajes-de-chat-dentro-de-hangouts-meet_1200x1200.jpg?v=1613404781');
+}
+.main{
+    margin-left: 360px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    margin-top:100px;
+    background:rgba(200,210,210,0.6);
+    width: 800px;height:600px;
+    border-radius: 20px;
+}
+.search{
+    padding-top: 50px;
+    margin-top: 50px;
+}
+#name{
+    width:200px;
+    display:inline;
+    background-color: #f1f1f1; 
+}
+.operations_button{
+    background-color:transparent;
+    border:0;
+}
+.name{
+    margin-left: 85px;
+}
+.button{
+    margin-left: 85px;
+}

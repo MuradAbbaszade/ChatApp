@@ -65,7 +65,7 @@
                                                 </div>
                                             </div>
                                             <div style="margin-top:50px "class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <button style="margin-left:21px" class="btn btn-danger btn-lg"><a style="color: white;text-decoration: none" href="chat">Back</a></button>
+                                                <button style="margin-left:21px" class="btn btn-danger btn-lg"><a style="color: white;text-decoration: none" href="main">Back</a></button>
                                                 <button style="margin-left:195px" type="submit" class="btn btn-success btn-lg">Confirm</button>
                                             </div>
 

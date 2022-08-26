@@ -9,18 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class GlobalChatController {
 
-    @RequestMapping("/globalChat")
+    @GetMapping("/globalChat")
     public String showChatPage(HttpServletRequest request, Model model) {
         return "globalChat";
-    }
-
-    @RequestMapping("/users")
-    public String showUsersPage(HttpServletRequest request, Model model) {
-        return "users";
-    }
-    
-    @GetMapping("/main")
-    public String showMainPage(HttpServletRequest request, Model model) {
-        return "main";
     }
 }
