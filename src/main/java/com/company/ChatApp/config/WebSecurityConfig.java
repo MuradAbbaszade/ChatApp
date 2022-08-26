@@ -26,6 +26,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+	.headers()
+		.frameOptions()
+			.sameOrigin()
+                .and()
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/chat*").authenticated()
@@ -38,7 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/chat", true)
+                .defaultSuccessUrl("/main", true)
                 .and()
                 .logout()
                 .logoutUrl("/logout");

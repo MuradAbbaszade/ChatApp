@@ -1,0 +1,32 @@
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.bg-image{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url('https://seodigitalgroup.com/wp-content/uploads/2020/12/livechat-software.jpg');
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.filter-blur{
+    background:rgba(240,280,300,0.6);
+    filter: blur(15px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#container{
+    margin-top: 40px;
+    z-index: 2;
+    position: absolute;
+}

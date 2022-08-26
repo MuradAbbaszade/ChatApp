@@ -1,0 +1,140 @@
+#chat2 .form-control {
+    border-color: transparent;
+}
+
+#chat2 .form-control:focus {
+    border-color: transparent;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.menu-item{
+    text-decoration: none;
+    color: black;
+    border: 0px;
+    background-color: transparent;
+    margin: 5px;
+    padding: 0
+}
+.menu-bar{
+    list-style-type:none;
+    color: white;
+    display:inline-flex;
+}
+.center{
+    margin-left: 220px;
+    margin-top: 60px;
+    width:1000px;
+}
+.profile-menu{
+    background-color: green;
+    text-align: center;
+}
+.menu-bar li {
+    color: white;
+    display:inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    width:120px;
+    margin:15px;
+    padding:15px;
+}
+.menu-bar li a {
+    text-decoration: none;
+    color:white;
+}
+.main{
+    margin-left: 540px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search{
+    margin-left:80px;
+}
+.name{
+    margin-left: 50px;
+}
+.button{
+    margin-left: 50px;
+}
+.logout{    
+    background-color: transparent;
+    border:0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.menu-bar li:hover{
+    background: #2bab0d;
+    border-radius:3px;
+} 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.row.content {height: 450px}
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+footer {
+    background-color: #242424;
+    color: white;
+    padding: 15px;
+    filter:blur(0);
+}
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;} 
+}
+.global-chat{
+    display:inline;
+    width:200px;
+    height:10px;
+    margin-right: 85px; 
+    color:gray;
+    font-size:20px;
+    font-family: "Georgia", Times, serif;
+    border-radius: 7px;
+}
+.private-chat{
+    display:inline;
+    width:200px;
+    height:10px;
+    margin-left: 85px;
+    color:gray;
+    font-size:20px;
+    font-family: "Georgia", Times, serif;
+    border-radius: 7px;
+}
+.global-chat:hover{
+    color: #F1F1F1;
+    text-decoration: none;
+}
+.private-chat:hover{
+    color: #F1F1F1;
+    text-decoration: none;
+}
+.bg-image{
+    position: relative;
+    height: 784px;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url('https://www.giosg.com/hubfs/Blogs%202022/How%20to%20Choose%20the%20Right%20Live%20Chat%20Software%20for%20Your%20Business/How%20to%20Choose%20Live%20Chat%20Blog%20hero%20image%20%E2%80%93%201300%20x%20630.png')
+}

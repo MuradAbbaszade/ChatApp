@@ -7,16 +7,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ChatController {
+public class GlobalChatController {
 
-    @RequestMapping("/chat")
+    @RequestMapping("/globalChat")
     public String showChatPage(HttpServletRequest request, Model model) {
-        return "chat";
+        return "globalChat";
     }
 
     @RequestMapping("/users")
     public String showUsersPage(HttpServletRequest request, Model model) {
         return "users";
     }
-
+    
+    @GetMapping("/main")
+    public String showMainPage(HttpServletRequest request, Model model) {
+        return "main";
+    }
 }

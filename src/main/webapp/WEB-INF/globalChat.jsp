@@ -13,13 +13,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
-            <%@ include file="assets/chat.css"%>
+            <%@ include file="assets/globalchat.css"%>
         </style>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <title>ChatApp</title>
         <script>
 
@@ -63,18 +65,23 @@
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy:HH:mm");
         String strDate = sdf.format(d);
     %>
-    <body onload="loadDoc()" style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
-        <div class="profile-menu">
-            <ul class="menu-bar">
-                <li><a class="menu-item fa fa-user" style="font-size:20px;"> Profile</a>
-                    <ul class="sub-menu menu-bar">
-                        <li><a class="menu-item fa fa-pencil" style="font-size:20px" href="edit"> Edit</a></li>
-                        <form method="GET" action="logout">
-                            <li><button type="submit" class="menu-item fa fa-sign-out" style="font-size:20px"> Logout</button></li>
-                        </form>
-                    </ul>
-                </li>
-            </ul>
+    <body onload="loadDoc()" >
+        <div class="bg-image">
+            <div class="filter-blur"></div>
         </div>
-            <iframe src="http://localhost:8081/ChatAppWeb/message-"></iframe>
+        <div id="container">
+            <div class="container" style="overflow:scroll;overflow-x: hidden">
+                <div id="messages" class="container" style="height:620px">
+
+                </div>
+            </div>
+            <form class="form-outline container" action="messages" method="POST">
+                <input type="hidden" name="email" id="email" value=<%=request.getRemoteUser()%> />
+                <input type="hidden" name="date" id="date" value=<%=strDate%> />
+                <input maxlength="125" style="border:2px solid black" placeholder="Type message.." class="form-control" name="message" id="message"/>
+                <br>
+                <a class="btn btn-danger" href="main">Back</a>
+                <button style="margin-left:985px" name="send" type="submit"  value="Send" class="btn btn-success">Send</button>
+            </form>
+        </div>
     </body>

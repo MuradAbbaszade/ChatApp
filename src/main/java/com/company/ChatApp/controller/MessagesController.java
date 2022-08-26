@@ -33,7 +33,7 @@ public class MessagesController {
         if (!message.equals("")) {
             messages.add(messageDto);
         }
-        response.sendRedirect("chat");
+        response.sendRedirect("globalChat");
         return ResponseEntity.ok(messages);
     }
 

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : users
-    Created on : Aug 23, 2022, 8:59:12 PM
-    Author     : roma-cervice
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -23,24 +17,24 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/chat.css">
+        <link rel="stylesheet" href="assets/main.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <style>
-            <%@ include file="assets/chat.css"%>
+            <%@ include file="assets/main.css"%>
         </style>
     </head>
     <body style="background-image: url('https://img.wallpapersafari.com/desktop/728/410/1/80/8DYndB.png')">
-        <div class="container center main" style="">
-            <div class="search">        
-                <form method="GET" action="users">
-                    <input class="input" type="text" name="name" id="name" value="" placeholder="Enter name..">
+        <div style="margin-top:100px" class="main">
+            <div>        
+                <form class="search" method="GET" action="users">
+                    <input class="form-control" style="width:200px;display:inline" type="text" name="name" id="name"  placeholder="Enter name..">
                     <button style="background-color:transparent;border:0" title="Search" class="operations_button" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
             </div>
             <br>
-            <div>
+            <div class="col-12">
                 <c:forEach items="${users}" var="u">
                     <c:set var="deleteButton" scope="request" value="false"/>
                     <c:set var="sendButton" scope="request" value="false"/>
@@ -68,61 +62,53 @@
                     </c:forEach>
                     <c:choose>
                         <c:when test="${deleteFriendButton}">
-                            <tr>
                             <form method="GET" action="friend-requests">
                                 <input type="hidden" value=${name} name="name"/>
                                 <input type="hidden" value=${remoteUserId} name="fromUserId"/>
                                 <input type="hidden" value=${u.id} name="toUserId"/>
-                                <td>#${u.id}</td>
-                                <td>${u.name} <i class='fas fa-user-friends'></i></td>
-                                <span id="${u.id}">
-                                    <button name="button" value="deleteFriend" class="btn btn-danger">Delete Friend</button>
+                                <span class="id">#${u.id}</span>
+                                <span class="name">${u.name}<i class='fas fa-user-friends'></i></span>
+                                <span class="button">
+                                    <button name="button" value="deleteFriend" style="font-size: 15px" class="btn btn-danger">Delete Friend</button>
                                 </span> 
                             </form>
-                            </tr>
                         </c:when>
                         <c:when test="${deleteButton}">
-                            <tr>
                             <form method="GET" action="friend-requests">
                                 <input type="hidden" value=${name} name="name"/>
                                 <input type="hidden" value=${remoteUserId} name="fromUserId"/>
                                 <input type="hidden" value=${u.id} name="toUserId"/>
-                                <td>#${u.id}</td>
-                                <td>${u.name}</td>
-                                <span id="${u.id}">
-                                    <button name="button" value="delete" class="btn btn-warning">Delete Friend Request</button>
+                                <span class="id">#${u.id}</span>
+                                <span class="name">${u.name}</span>
+                                <span class="button">
+                                    <button name="button" value="delete" style="font-size: 15px" class="btn btn-warning">Delete Friend Request</button>
                                 </span> 
                             </form>
-                            </tr>
                         </c:when>
                         <c:when test="${acceptButton}">
-                            <tr>
                             <form method="GET" action="friend-requests">
                                 <input type="hidden" value=${name} name="name"/>
                                 <input type="hidden" value=${u.id} name="fromUserId"/>
                                 <input type="hidden" value=${remoteUserId} name="toUserId"/>
-                                <td>#${u.id}</td>
-                                <td>${u.name}</td>
-                                <span id="${u.id}">
-                                    <button name="button" value="accept" class="btn btn-success">Accept Friend Request</button>
-                                    <button name="button" value="delete" class="btn btn-danger">Decline Friend Request</button>
+                                <span class="id">#${u.id}</span>
+                                <span class="name">${u.name}</span>
+                                <span class="button">
+                                    <button name="button" value="accept" style="font-size: 15px" class="btn btn-success">Accept Friend Request</button>
+                                    <button name="button" value="delete" style="font-size: 15px" class="btn btn-danger">Decline Friend Request</button>
                                 </span> 
                             </form>
-                            </tr>
                         </c:when>
                         <c:otherwise>
-                            <tr>
                             <form method="GET" action="friend-requests">
                                 <input type="hidden" value=${name} name="name"/>
                                 <input type="hidden" value=${remoteUserId} name="fromUserId"/>
                                 <input type="hidden" value=${u.id} name="toUserId"/>
-                                <td>#${u.id}</td>
-                                <td>${u.name}</td>
-                                <span id="${u.id}">
-                                    <button name="button" value="send" class="btn btn-primary">Send Friend Request</button>
+                                <span class="id">#${u.id}</span>
+                                <span class="name">${u.name}</span>
+                                <span class="button">
+                                    <button name="button" value="send" style="font-size: 15px" class="btn btn-primary">Send Friend Request</button>
                                 </span> 
                             </form>
-                            </tr>
                         </c:otherwise>
                     </c:choose><br>
                 </c:forEach>
