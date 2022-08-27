@@ -12,16 +12,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="assets/main.css">
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
         <title>ChatApp</title>
     </head>
     <body>
-        <%
-            String message = "";
-            if (request.getAttribute("message") != null) {
-                message = request.getAttribute("message").toString();
-            }
-        %>
         <section class="vh-100" style="background-color: #eee">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -69,7 +64,7 @@
 
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <label style="color:red" id="errormessage"><%= message %></label>
+                                                    <label style="color:red" id="errormessage">${message}</label>
                                                 </div>
                                             </div>
 
@@ -83,8 +78,9 @@
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                 <button type="submit" class="btn btn-primary btn-lg">Register</button>
                                             </div>
-                                            <p class="text-center small fw-bold mt-0 pt-0 mb-0">If you already have an account <a style="text-decoration: none" href="login"
-                                                                                                                                  class="link-submit">Login</a></p>
+                                            <p class="text-center small fw-bold mt-0 pt-0 mb-0">
+                                                If you already have an account <a style="text-decoration: none" href="login" class="link-submit">Login</a>
+                                            </p>
 
                                         </form>
                                     </div>

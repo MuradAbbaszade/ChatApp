@@ -1,7 +1,6 @@
-
 package com.company.ChatApp.annotation;
 
-import com.company.ChatApp.validator.PasswordMatchesValidator;
+import com.company.ChatApp.validator.EmailValidator;
 import java.lang.annotation.Documented;
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;
@@ -13,10 +12,10 @@ import javax.validation.Payload;
 
 @Target({TYPE,ANNOTATION_TYPE})
 @Retention(RUNTIME)
-@Constraint(validatedBy = PasswordMatchesValidator.class)
+@Constraint(validatedBy = EmailValidator.class)
 @Documented
-public @interface PasswordMatches {
-    String message() default "Passwords don't match";
+public @interface EmailExist {
+    String message() default "Email already exist";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

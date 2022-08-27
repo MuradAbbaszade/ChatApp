@@ -1,12 +1,14 @@
 
 package com.company.ChatApp.dto;
 
+import com.company.ChatApp.annotation.EmailExist;
 import com.company.ChatApp.annotation.PasswordMatches;
 import java.util.List;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @PasswordMatches
+@EmailExist
 public class UserDTO {
 
     private int id ;

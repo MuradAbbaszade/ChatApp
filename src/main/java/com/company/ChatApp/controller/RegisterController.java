@@ -68,13 +68,7 @@ public class RegisterController {
             mv.addObject("message", ex.getMessage());
             return mv;
         }
-        try {
-            User registered = userService.registerNewUserAccount(userDto);
-        } catch (Exception ex) {
-            ModelAndView mv = new ModelAndView();
-            mv.addObject("message", ex.getMessage());
-            return mv;
-        }
+        User registered = userService.registerNewUserAccount(userDto);
         return new ModelAndView("login", "user", userDto);
     }
 }

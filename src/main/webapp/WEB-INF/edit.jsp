@@ -25,12 +25,6 @@
         <title>ChatApp</title>
     </head>
     <body>
-        <%
-            String message = "";
-            if (request.getAttribute("message") != null) {
-                message = request.getAttribute("message").toString();
-            }
-        %>
         <section class="vh-100" style="background-color: #eee;">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -47,21 +41,21 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="name" id="name" class="form-control" value="<%=EditController.remoteUserName%>">
+                                                    <input name="name" id="name" class="form-control" value="${user.name}">
                                                     <label class="form-label" for="name">Your Name</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input name="email" type="email" id="email" class="form-control" value="<%=EditController.remoteUserEmail%>"/>
+                                                    <input name="email" type="email" id="email" class="form-control" value="${user.email}"/>
                                                     <label class="form-label" for="email">Your Email</label>
                                                     <label style="color:gray;font-size:15px" class="form-label" for="email">If you change your email you will need to login again</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <label style="color:red" id="errormessage"><%= message%></label>
+                                                    <label style="color:red" id="errormessage">${message}</label>
                                                 </div>
                                             </div>
                                             <div style="margin-top:50px "class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

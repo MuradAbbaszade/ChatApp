@@ -22,14 +22,10 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
-@RequestMapping("/edit")
 public class EditController {
 
     @Autowired
     UserDAOService userService;
-
-    public static String remoteUserName;
-    public static String remoteUserEmail;
 
     @Bean
     public MessageSource messageSource() {
@@ -41,15 +37,16 @@ public class EditController {
         return messageSource;
     }
 
-    @GetMapping
-    public String showEditPage(HttpServletRequest request) {
-        remoteUserEmail = request.getRemoteUser();
+    @GetMapping("/edit")
+    public ModelAndView showEditPage(HttpServletRequest request) {
+        String remoteUserEmail = request.getRemoteUser();
         User user = userService.findByEmail(remoteUserEmail);
-        remoteUserName = user.getName();
-        return "edit";
+        ModelAndView mv = new ModelAndView("edit");
+        mv.addObject("user",user);
+        return mv;
     }
 
-    @PostMapping
+   @PostMapping("/edit")
     public ModelAndView edit(HttpServletRequest request,
             @ModelAttribute("userForm") @Valid EditUserDTO editUserDto, BindingResult result,
             @RequestParam(value = "name", required = false) String name,
@@ -57,9 +54,9 @@ public class EditController {
 
         ModelAndView mv = null;
         RedirectView view = null;
-        remoteUserEmail = request.getRemoteUser();
+        String remoteUserEmail = request.getRemoteUser();
         User user = userService.findByEmail(remoteUserEmail);
-        remoteUserName = user.getName();
+        String remoteUserName = user.getName();
 
         try {
             if (result.hasErrors()) {
@@ -78,7 +75,7 @@ public class EditController {
         }
         if (userService.findByEmail(email) != null && !(email.equals(user.getEmail()))) {
             mv = new ModelAndView("edit");
-            view = new RedirectView("/edit", true);
+            mv.addObject("message", "Email already exist");
         } else {
             user.setName(name);
             user.setEmail(email);

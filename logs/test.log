@@ -1,4 +1,4 @@
-2022-08-26 07:37:42.373  INFO 5012 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:13:14.251  INFO 664 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -8,25 +8,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 07:37:42.496  INFO 5012 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5012 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 07:37:42.497  INFO 5012 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 07:37:43.891  INFO 5012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 07:37:43.922  INFO 5012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
-2022-08-26 07:37:44.812  INFO 5012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 07:37:45.145  INFO 5012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 07:37:45.292  INFO 5012 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 07:37:45.378  INFO 5012 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 07:37:45.649  INFO 5012 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 07:37:45.885  INFO 5012 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 07:37:47.042  INFO 5012 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 07:37:47.220  INFO 5012 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 07:37:47.521  WARN 5012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 07:37:48.018  INFO 5012 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2cdc51, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@169a9a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@8e24e7, org.springframework.security.web.header.HeaderWriterFilter@157f915, org.springframework.security.web.authentication.logout.LogoutFilter@be750c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d697ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ad919c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b09da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1470477, org.springframework.security.web.session.SessionManagementFilter@5dc557, org.springframework.security.web.access.ExceptionTranslationFilter@e5bd34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10c45f4]
-2022-08-26 07:37:49.415  INFO 5012 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.514 seconds (JVM running for 8.903)
-2022-08-26 07:37:49.597  INFO 5012 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 07:37:49.599  INFO 5012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 07:37:49.611  INFO 5012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 09:34:36.814  INFO 436 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:13:14.400  INFO 664 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 664 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:13:14.401  INFO 664 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:13:15.722  INFO 664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:13:15.761  INFO 664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:13:16.853  INFO 664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:13:17.178  INFO 664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:13:17.375  INFO 664 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:13:17.706  INFO 664 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:13:18.413  INFO 664 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:13:19.040  INFO 664 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:13:20.109  INFO 664 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:13:20.286  INFO 664 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:13:20.517  WARN 664 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:13:21.080  INFO 664 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@899811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ae7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@157f915, org.springframework.security.web.header.HeaderWriterFilter@1b1ce78, org.springframework.security.web.authentication.logout.LogoutFilter@1b4ed71, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e007be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dc557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732e1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171aa66, org.springframework.security.web.session.SessionManagementFilter@6d1ff3, org.springframework.security.web.access.ExceptionTranslationFilter@ee6c13, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@148e1fb]
+2022-08-27 08:13:22.693  INFO 664 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.896 seconds (JVM running for 10.317)
+2022-08-27 08:13:22.863  INFO 664 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:13:22.866  INFO 664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:13:22.876  INFO 664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 08:39:53.845  INFO 5640 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -36,25 +36,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 09:34:36.920  INFO 436 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 436 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 09:34:36.921  INFO 436 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 09:34:38.436  INFO 436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 09:34:38.469  INFO 436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
-2022-08-26 09:34:39.299  INFO 436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 09:34:39.591  INFO 436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 09:34:39.808  INFO 436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 09:34:39.901  INFO 436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 09:34:40.240  INFO 436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 09:34:40.481  INFO 436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 09:34:41.541  INFO 436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 09:34:41.716  INFO 436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:34:41.916  WARN 436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 09:34:42.493  INFO 436 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15b4202, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e03769, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c6feea, org.springframework.security.web.header.HeaderWriterFilter@16984c, org.springframework.security.web.authentication.logout.LogoutFilter@fb13f1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@69931a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c7fb0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8e24e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@899811, org.springframework.security.web.session.SessionManagementFilter@3ad8e7, org.springframework.security.web.access.ExceptionTranslationFilter@c96eb4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@136f40f]
-2022-08-26 09:34:44.021  INFO 436 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.644 seconds (JVM running for 9.244)
-2022-08-26 09:34:44.197  INFO 436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:34:44.200  INFO 436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 09:34:44.210  INFO 436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 09:35:08.763  INFO 4548 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:39:53.950  INFO 5640 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5640 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:39:53.951  INFO 5640 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:39:55.292  INFO 5640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:39:55.326  INFO 5640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:39:56.520  INFO 5640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:39:56.799  INFO 5640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:39:57.061  INFO 5640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:39:57.149  INFO 5640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:39:57.413  INFO 5640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:39:57.706  INFO 5640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:39:58.756  INFO 5640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:39:58.946  INFO 5640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:39:59.187  WARN 5640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:39:59.690  INFO 5640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@899811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ae7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@157f915, org.springframework.security.web.header.HeaderWriterFilter@1b1ce78, org.springframework.security.web.authentication.logout.LogoutFilter@1b4ed71, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e007be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dc557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732e1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171aa66, org.springframework.security.web.session.SessionManagementFilter@6d1ff3, org.springframework.security.web.access.ExceptionTranslationFilter@ee6c13, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@148e1fb]
+2022-08-27 08:40:01.249  INFO 5640 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.931 seconds (JVM running for 9.488)
+2022-08-27 08:40:01.431  INFO 5640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:40:01.434  INFO 5640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:40:01.445  INFO 5640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 08:41:27.041  INFO 5772 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -64,25 +64,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 09:35:08.876  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4548 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 09:35:08.877  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 09:35:10.263  INFO 4548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 09:35:10.300  INFO 4548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
-2022-08-26 09:35:11.095  INFO 4548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 09:35:11.457  INFO 4548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 09:35:11.683  INFO 4548 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 09:35:11.769  INFO 4548 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 09:35:12.044  INFO 4548 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 09:35:12.294  INFO 4548 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 09:35:13.356  INFO 4548 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 09:35:13.565  INFO 4548 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:35:13.832  WARN 4548 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 09:35:14.334  INFO 4548 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1571cfc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1aec277, org.springframework.security.web.context.SecurityContextPersistenceFilter@b63a04, org.springframework.security.web.header.HeaderWriterFilter@1c16f19, org.springframework.security.web.authentication.logout.LogoutFilter@11a9647, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f23816, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bba7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16984c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1475663, org.springframework.security.web.session.SessionManagementFilter@1e6d228, org.springframework.security.web.access.ExceptionTranslationFilter@a1146d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca31fc]
-2022-08-26 09:35:15.881  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.724 seconds (JVM running for 10.127)
-2022-08-26 09:35:16.090  INFO 4548 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:35:16.093  INFO 4548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 09:35:16.107  INFO 4548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 09:37:46.400  INFO 7356 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:41:27.118  INFO 5772 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5772 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:41:27.119  INFO 5772 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:41:28.504  INFO 5772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:41:28.539  INFO 5772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:41:29.461  INFO 5772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:41:29.741  INFO 5772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:41:29.889  INFO 5772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:41:29.977  INFO 5772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:41:30.346  INFO 5772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:41:30.660  INFO 5772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:41:31.933  INFO 5772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:41:32.232  INFO 5772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:41:32.541  WARN 5772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:41:33.045  INFO 5772 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69931a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@124ddd7, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bba7d, org.springframework.security.web.header.HeaderWriterFilter@1e6d228, org.springframework.security.web.authentication.logout.LogoutFilter@2b09da, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@148e1fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e5bd34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ad8e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e007be, org.springframework.security.web.session.SessionManagementFilter@ee6c13, org.springframework.security.web.access.ExceptionTranslationFilter@186c206, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cafd13]
+2022-08-27 08:41:34.563  INFO 5772 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.012 seconds (JVM running for 9.636)
+2022-08-27 08:41:34.733  INFO 5772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:41:34.735  INFO 5772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:41:34.746  INFO 5772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 08:43:14.454  INFO 4272 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -92,25 +92,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 09:37:46.508  INFO 7356 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 7356 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 09:37:46.509  INFO 7356 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 09:37:47.854  INFO 7356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 09:37:47.907  INFO 7356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 0 JPA repository interfaces.
-2022-08-26 09:37:49.120  INFO 7356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 09:37:49.496  INFO 7356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 09:37:49.730  INFO 7356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 09:37:49.817  INFO 7356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 09:37:50.083  INFO 7356 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 09:37:50.322  INFO 7356 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 09:37:51.401  INFO 7356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 09:37:51.578  INFO 7356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:37:51.848  WARN 7356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 09:37:52.363  INFO 7356 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19e0bf0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@99b971, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b1ce78, org.springframework.security.web.header.HeaderWriterFilter@6bba7d, org.springframework.security.web.authentication.logout.LogoutFilter@163bb40, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10c45f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d1ff3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c7fb0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d697ab, org.springframework.security.web.session.SessionManagementFilter@e5bd34, org.springframework.security.web.access.ExceptionTranslationFilter@4ca109, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1791dca]
-2022-08-26 09:37:53.918  INFO 7356 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.037 seconds (JVM running for 9.68)
-2022-08-26 09:37:54.131  INFO 7356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 09:37:54.134  INFO 7356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 09:37:54.148  INFO 7356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 10:09:14.935  INFO 4548 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:43:14.544  INFO 4272 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4272 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:43:14.545  INFO 4272 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:43:15.884  INFO 4272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:43:15.916  INFO 4272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:43:16.822  INFO 4272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:43:17.096  INFO 4272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:43:17.245  INFO 4272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:43:17.333  INFO 4272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:43:17.666  INFO 4272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:43:17.936  INFO 4272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:43:19.083  INFO 4272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:43:19.258  INFO 4272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:43:19.490  WARN 4272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:43:19.993  INFO 4272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15b4202, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e03769, org.springframework.security.web.context.SecurityContextPersistenceFilter@b73e0a, org.springframework.security.web.header.HeaderWriterFilter@13f7704, org.springframework.security.web.authentication.logout.LogoutFilter@a01cb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@69931a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@157f915, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17884d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@899811, org.springframework.security.web.session.SessionManagementFilter@1b1ce78, org.springframework.security.web.access.ExceptionTranslationFilter@1e6d228, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@136f40f]
+2022-08-27 08:43:21.458  INFO 4272 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.438 seconds (JVM running for 9.48)
+2022-08-27 08:43:21.631  INFO 4272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:43:21.633  INFO 4272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:43:21.651  INFO 4272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 08:48:37.919  INFO 6096 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -120,25 +120,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 10:09:15.016  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4548 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 10:09:15.017  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 10:09:16.718  INFO 4548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 10:09:16.752  INFO 4548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
-2022-08-26 10:09:17.661  INFO 4548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 10:09:17.957  INFO 4548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 10:09:18.127  INFO 4548 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 10:09:18.220  INFO 4548 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 10:09:18.527  INFO 4548 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 10:09:18.792  INFO 4548 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 10:09:20.003  INFO 4548 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 10:09:20.373  INFO 4548 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 10:09:20.696  WARN 4548 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 10:09:21.403  INFO 4548 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51ae7c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@171aa66, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dc557, org.springframework.security.web.header.HeaderWriterFilter@6d1ff3, org.springframework.security.web.authentication.logout.LogoutFilter@835f2f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@135afcf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17884d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c42964, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@739e5e, org.springframework.security.web.session.SessionManagementFilter@1c6feea, org.springframework.security.web.access.ExceptionTranslationFilter@17cc4e8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f45cc]
-2022-08-26 10:09:22.802  INFO 4548 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.463 seconds (JVM running for 9.833)
-2022-08-26 10:09:22.973  INFO 4548 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 10:09:22.976  INFO 4548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 10:09:22.988  INFO 4548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 11:14:59.995  INFO 6380 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:48:38.031  INFO 6096 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 6096 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:48:38.036  INFO 6096 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:48:39.567  INFO 6096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:48:39.600  INFO 6096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:48:40.518  INFO 6096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:48:40.814  INFO 6096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:48:40.960  INFO 6096 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:48:41.119  INFO 6096 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:48:41.480  INFO 6096 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:48:41.739  INFO 6096 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:48:42.817  INFO 6096 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:48:42.994  INFO 6096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:48:43.231  WARN 6096 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:48:43.899  INFO 6096 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@124ddd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e007be, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e8d917, org.springframework.security.web.header.HeaderWriterFilter@c96eb4, org.springframework.security.web.authentication.logout.LogoutFilter@1d389f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f45cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13f7704, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d1ff3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@135afcf, org.springframework.security.web.session.SessionManagementFilter@b63a04, org.springframework.security.web.access.ExceptionTranslationFilter@122b575, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1226f27]
+2022-08-27 08:48:45.475  INFO 6096 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.12 seconds (JVM running for 9.848)
+2022-08-27 08:48:45.653  INFO 6096 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:48:45.656  INFO 6096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:48:45.666  INFO 6096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 08:51:30.506  INFO 4260 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -148,25 +148,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 11:15:00.085  INFO 6380 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 6380 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 11:15:00.086  INFO 6380 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 11:15:01.436  INFO 6380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 11:15:01.476  INFO 6380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
-2022-08-26 11:15:02.411  INFO 6380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 11:15:02.690  INFO 6380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 11:15:02.832  INFO 6380 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 11:15:02.922  INFO 6380 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 11:15:03.308  INFO 6380 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 11:15:03.543  INFO 6380 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 11:15:05.014  INFO 6380 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 11:15:05.194  INFO 6380 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 11:15:05.422  WARN 6380 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 11:15:05.974  INFO 6380 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e479da, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@124cdd9, org.springframework.security.web.context.SecurityContextPersistenceFilter@11a9647, org.springframework.security.web.header.HeaderWriterFilter@17884d, org.springframework.security.web.authentication.logout.LogoutFilter@2bc2f4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@899811, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b09da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@262f2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dd00b6, org.springframework.security.web.session.SessionManagementFilter@732e1c, org.springframework.security.web.access.ExceptionTranslationFilter@3ad8e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69931a]
-2022-08-26 11:15:07.423  INFO 6380 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.868 seconds (JVM running for 9.403)
-2022-08-26 11:15:07.605  INFO 6380 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 11:15:07.608  INFO 6380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 11:15:07.621  INFO 6380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 18:57:07.205  INFO 5288 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 08:51:30.589  INFO 4260 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 4260 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 08:51:30.590  INFO 4260 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 08:51:31.929  INFO 4260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 08:51:31.962  INFO 4260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2022-08-27 08:51:32.845  INFO 4260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 08:51:33.129  INFO 4260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 08:51:33.282  INFO 4260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 08:51:33.369  INFO 4260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 08:51:33.701  INFO 4260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 08:51:33.977  INFO 4260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 08:51:35.506  INFO 4260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 08:51:35.730  INFO 4260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:51:35.961  WARN 4260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 08:51:36.462  INFO 4260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69931a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@124ddd7, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bba7d, org.springframework.security.web.header.HeaderWriterFilter@1e6d228, org.springframework.security.web.authentication.logout.LogoutFilter@2b09da, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@148e1fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e5bd34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ad8e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e007be, org.springframework.security.web.session.SessionManagementFilter@ee6c13, org.springframework.security.web.access.ExceptionTranslationFilter@186c206, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cafd13]
+2022-08-27 08:51:38.026  INFO 4260 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.051 seconds (JVM running for 9.508)
+2022-08-27 08:51:38.251  INFO 4260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 08:51:38.254  INFO 4260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 08:51:38.267  INFO 4260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 09:05:48.281  INFO 5568 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -176,25 +176,25 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 18:57:07.329  INFO 5288 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5288 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 18:57:07.330  INFO 5288 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 18:57:08.724  INFO 5288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 18:57:08.774  INFO 5288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
-2022-08-26 18:57:09.608  INFO 5288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 18:57:09.924  INFO 5288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 18:57:10.088  INFO 5288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 18:57:10.175  INFO 5288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 18:57:10.443  INFO 5288 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 18:57:10.684  INFO 5288 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 18:57:11.829  INFO 5288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 18:57:12.005  INFO 5288 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 18:57:12.266  WARN 5288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 18:57:12.799  INFO 5288 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@831d69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15b4202, org.springframework.security.web.context.SecurityContextPersistenceFilter@b73e0a, org.springframework.security.web.header.HeaderWriterFilter@13f7704, org.springframework.security.web.authentication.logout.LogoutFilter@a01cb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1475663, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@157f915, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17884d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e03769, org.springframework.security.web.session.SessionManagementFilter@1b1ce78, org.springframework.security.web.access.ExceptionTranslationFilter@1e6d228, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f23816]
-2022-08-26 18:57:14.200  INFO 5288 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.424 seconds (JVM running for 9.006)
-2022-08-26 18:57:14.375  INFO 5288 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 18:57:14.377  INFO 5288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 18:57:14.388  INFO 5288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-26 20:30:23.654  INFO 5932 --- [main] o.s.boot.SpringApplication               : 
+2022-08-27 09:05:48.371  INFO 5568 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5568 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 09:05:48.372  INFO 5568 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 09:05:49.718  INFO 5568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 09:05:49.751  INFO 5568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2022-08-27 09:05:50.640  INFO 5568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 09:05:50.917  INFO 5568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 09:05:51.074  INFO 5568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 09:05:51.186  INFO 5568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 09:05:51.519  INFO 5568 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 09:05:51.753  INFO 5568 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 09:05:52.886  INFO 5568 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 09:05:53.062  INFO 5568 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:05:53.300  WARN 5568 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 09:05:53.857  INFO 5568 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@899811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ae7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@157f915, org.springframework.security.web.header.HeaderWriterFilter@1b1ce78, org.springframework.security.web.authentication.logout.LogoutFilter@1b4ed71, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e007be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dc557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732e1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171aa66, org.springframework.security.web.session.SessionManagementFilter@6d1ff3, org.springframework.security.web.access.ExceptionTranslationFilter@ee6c13, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@148e1fb]
+2022-08-27 09:05:55.259  INFO 5568 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.392 seconds (JVM running for 9.347)
+2022-08-27 09:05:55.426  INFO 5568 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:05:55.429  INFO 5568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 09:05:55.440  INFO 5568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 09:08:41.867  INFO 5092 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -204,21 +204,77 @@
  :: Spring Boot ::                (v2.7.2)
 
 
-2022-08-26 20:30:23.738  INFO 5932 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5932 (started by roma-cervice in C:\Workspace\ChatApp)
-2022-08-26 20:30:23.739  INFO 5932 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-08-26 20:30:25.302  INFO 5932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-26 20:30:25.342  INFO 5932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
-2022-08-26 20:30:26.251  INFO 5932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-26 20:30:26.545  INFO 5932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-26 20:30:26.687  INFO 5932 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-26 20:30:26.775  INFO 5932 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-26 20:30:27.094  INFO 5932 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-26 20:30:27.367  INFO 5932 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-08-26 20:30:28.512  INFO 5932 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-26 20:30:28.691  INFO 5932 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 20:30:28.923  WARN 5932 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-26 20:30:29.448  INFO 5932 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1571cfc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1aec277, org.springframework.security.web.context.SecurityContextPersistenceFilter@ee6c13, org.springframework.security.web.header.HeaderWriterFilter@4ca109, org.springframework.security.web.authentication.logout.LogoutFilter@c42964, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f23816, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17cc4e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13f7704, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1475663, org.springframework.security.web.session.SessionManagementFilter@17dd6f, org.springframework.security.web.access.ExceptionTranslationFilter@2bd5e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca31fc]
-2022-08-26 20:30:30.896  INFO 5932 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.741 seconds (JVM running for 9.336)
-2022-08-26 20:30:31.064  INFO 5932 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-26 20:30:31.067  INFO 5932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-26 20:30:31.078  INFO 5932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 09:08:41.951  INFO 5092 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5092 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 09:08:41.953  INFO 5092 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 09:08:43.328  INFO 5092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 09:08:43.361  INFO 5092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2022-08-27 09:08:44.255  INFO 5092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 09:08:44.529  INFO 5092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 09:08:44.678  INFO 5092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 09:08:44.765  INFO 5092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 09:08:45.120  INFO 5092 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 09:08:45.517  INFO 5092 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 09:08:46.653  INFO 5092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 09:08:46.829  INFO 5092 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:08:47.058  WARN 5092 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 09:08:47.621  INFO 5092 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@124ddd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e007be, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e8d917, org.springframework.security.web.header.HeaderWriterFilter@c96eb4, org.springframework.security.web.authentication.logout.LogoutFilter@1d389f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f45cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13f7704, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d1ff3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@135afcf, org.springframework.security.web.session.SessionManagementFilter@b63a04, org.springframework.security.web.access.ExceptionTranslationFilter@122b575, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1226f27]
+2022-08-27 09:08:49.031  INFO 5092 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.706 seconds (JVM running for 9.448)
+2022-08-27 09:08:49.199  INFO 5092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:08:49.202  INFO 5092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 09:08:49.212  INFO 5092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 09:15:16.476  INFO 5212 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-27 09:15:16.553  INFO 5212 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 5212 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 09:15:16.554  INFO 5212 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 09:15:17.950  INFO 5212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 09:15:17.994  INFO 5212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+2022-08-27 09:15:19.361  INFO 5212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 09:15:19.681  INFO 5212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 09:15:19.828  INFO 5212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 09:15:19.986  INFO 5212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 09:15:20.252  INFO 5212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 09:15:20.541  INFO 5212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 09:15:21.631  INFO 5212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 09:15:21.811  INFO 5212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:15:22.043  WARN 5212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 09:15:22.561  INFO 5212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@124ddd7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e007be, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e8d917, org.springframework.security.web.header.HeaderWriterFilter@c96eb4, org.springframework.security.web.authentication.logout.LogoutFilter@1d389f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f45cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13f7704, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d1ff3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@135afcf, org.springframework.security.web.session.SessionManagementFilter@b63a04, org.springframework.security.web.access.ExceptionTranslationFilter@122b575, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1226f27]
+2022-08-27 09:15:24.157  INFO 5212 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 8.198 seconds (JVM running for 9.998)
+2022-08-27 09:15:24.331  INFO 5212 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:15:24.333  INFO 5212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 09:15:24.352  INFO 5212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-27 09:24:03.515  INFO 432 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
+
+
+2022-08-27 09:24:03.601  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : Starting ChatAppWebApplicationTests using Java 1.8.0_202 on roma-cervice-PC with PID 432 (started by roma-cervice in C:\Workspace\ChatApp)
+2022-08-27 09:24:03.603  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-08-27 09:24:04.924  INFO 432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-27 09:24:05.006  INFO 432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 0 JPA repository interfaces.
+2022-08-27 09:24:05.850  INFO 432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-27 09:24:06.125  INFO 432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-27 09:24:06.268  INFO 432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-27 09:24:06.428  INFO 432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-27 09:24:06.735  INFO 432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-27 09:24:07.013  INFO 432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-27 09:24:08.045  INFO 432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-27 09:24:08.261  INFO 432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:24:08.524  WARN 432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-27 09:24:09.034  INFO 432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@899811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ae7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@157f915, org.springframework.security.web.header.HeaderWriterFilter@1b1ce78, org.springframework.security.web.authentication.logout.LogoutFilter@1b4ed71, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e007be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dc557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732e1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171aa66, org.springframework.security.web.session.SessionManagementFilter@6d1ff3, org.springframework.security.web.access.ExceptionTranslationFilter@ee6c13, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@148e1fb]
+2022-08-27 09:24:10.550  INFO 432 --- [main] c.c.C.ChatAppWebApplicationTests         : Started ChatAppWebApplicationTests in 7.576 seconds (JVM running for 9.154)
+2022-08-27 09:24:10.826  INFO 432 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-27 09:24:10.829  INFO 432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-27 09:24:10.839  INFO 432 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
