@@ -46,7 +46,7 @@
 
         <footer style="margin-top: 70px" class="container-fluid text-center">
             <a href="globalChat" class="global-chat">Global Chat</a>
-            <a href="privateChat" class="private-chat" >Private Chat</a>
+            <a href="friends" class="private-chat" >Private Chat</a>
         </footer>
     </body>
 </html>
