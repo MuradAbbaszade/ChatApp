@@ -8,7 +8,7 @@ Search Page
 ![search](https://user-images.githubusercontent.com/98694275/187056694-ebdf8e76-3dd3-4e28-b0bc-179d39c6758e.png)
 
 Chat Page
-![chat3](https://user-images.githubusercontent.com/98694275/187056700-dfc40a6e-fd10-4163-9c68-f391ce28fe16.png)
+![global-chat](https://user-images.githubusercontent.com/98694275/187056747-1e81e876-477b-4fbd-87b1-8c584c371cc9.png)
 
 Login Page
 ![login_page](https://user-images.githubusercontent.com/98694275/184527945-5ecda00a-fa9e-4e11-9873-45ffa41f4ebf.png)
