@@ -5,7 +5,6 @@
 - Join Private Chat
 - Add/Delete Friend
 - Search Users
-- 
 ## 👨‍💻 Used technologies
 `Java`, `Ajax`, `Spring Security`, `Hibernate`, `MySQL`, `JSP`, `Spring Data`, `Spring MVC`, `REST` 
 
