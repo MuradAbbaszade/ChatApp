@@ -1,5 +1,12 @@
 # ChatApp
+bulb Features
+Login/Register
+Join Global Chat
+Join Private Chat
+Add/Delete Friend
+Search Users
 
+camera_flash Screenshots
 Main Page
 ![main](https://user-images.githubusercontent.com/98694275/187056689-d7261a87-31b4-4cfd-987e-8ae371dc76c6.png)
 
