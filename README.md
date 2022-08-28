@@ -1,10 +1,10 @@
 # ChatApp
 ## 💡 Features
-Login/Register
-Join Global Chat
-Join Private Chat
-Add/Delete Friend
-Search Users
+- Login/Register
+- Join Global Chat
+- Join Private Chat
+- Add/Delete Friend
+- Search Users
 
 ## 📸 Screenshots
 Main Page
