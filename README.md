@@ -14,4 +14,4 @@ Login Page
 ![login_page](https://user-images.githubusercontent.com/98694275/184527945-5ecda00a-fa9e-4e11-9873-45ffa41f4ebf.png)
 
 Register Page
-![register_page](https://user-images.githubusercontent.com/98694275/184527955-c28ef71a-2ff3-4b67-aebf-e7e05d2864bd.png
+![register_page](https://user-images.githubusercontent.com/98694275/184527955-c28ef71a-2ff3-4b67-aebf-e7e05d2864bd.png)
